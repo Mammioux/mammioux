@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>lstimer</key>
+	<integer>15</integer>
+	<key>rstimer</key>
+	<integer>15</integer>
+	<key>lastSession</key>
+	<date>2009-03-06T03:59:55Z</date>
+	<key>feedingsDay</key>
+	<integer>8</integer>
+	<key>leftsidelast</key>
+	<false/>
+</dict>
+</plist>

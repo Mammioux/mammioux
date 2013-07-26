@@ -1,26 +1,276 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Mammioux View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="MXViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                <viewController id="2" customClass="MammiouxViewController" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zv4-zw-VDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="121" affinity="minY"/>
+                            <userLayoutGuide location="166" affinity="minY"/>
+                            <userLayoutGuide location="240" affinity="minX"/>
+                            <userLayoutGuide location="96" affinity="minY"/>
+                            <userLayoutGuide location="150" affinity="minY"/>
+                        </userGuides>
+                        <subviews>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-TD-kXd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="LMn-l9-9an"/>
+                                    <constraint firstAttribute="height" constant="240" type="user" id="lwQ-Qf-OnO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled" title="" backgroundImage="button_dark.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="selected" title="" backgroundImage="RIght_Hand.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="RIght_Hand.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectB:" destination="2" eventType="touchUpInside" id="p5L-gm-vg9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrT-BF-wqP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ECv-Wy-kDH"/>
+                                    <constraint firstAttribute="height" constant="240" type="user" id="Jr5-6i-UaM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled" title="" backgroundImage="button_dark.png"/>
+                                <state key="selected" title="" backgroundImage="Left_Hand.png"/>
+                                <state key="highlighted" title="LEFT" backgroundImage="Left_Hand.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectB:" destination="2" eventType="touchUpInside" id="7Do-br-uJc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="12:30" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="20" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99k-KX-Yco">
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="R1D-ne-J0C"/>
+                                    <constraint firstAttribute="width" constant="113" id="aXD-b5-oDa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="01:45" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="40" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlk-pe-YBS">
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="5rk-6X-vSq"/>
+                                    <constraint firstAttribute="width" constant="118" id="bqQ-l8-f0U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" progress="0.73943662643432617" translatesAutoresizingMaskIntoConstraints="NO" id="8fZ-Kr-LHP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="e6F-bk-SH8"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" progress="0.1619717925786972" translatesAutoresizingMaskIntoConstraints="NO" id="1kR-KN-vMv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="8sB-Be-1Gj"/>
+                                </constraints>
+                            </progressView>
+                            <activityIndicatorView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Etm-Dz-1RK"/>
+                            <activityIndicatorView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WOl-7c-ill"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Last time: 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-gd-z95">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="v5v-wE-Ea4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-on-gRV">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9lh-je-Epk" kind="modal" identifier="InfoSegue" modalTransitionStyle="coverVertical" id="Ohd-Co-Fu9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="Etm-Dz-1RK" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="101" id="2gq-6S-kcD"/>
+                            <constraint firstItem="8fZ-Kr-LHP" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="9" id="8Qh-Jo-xmA"/>
+                            <constraint firstItem="LrT-BF-wqP" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="user" id="9IN-xU-Zum"/>
+                            <constraint firstItem="8fZ-Kr-LHP" firstAttribute="top" secondItem="1kR-KN-vMv" secondAttribute="top" type="default" id="9h6-96-WAc"/>
+                            <constraint firstItem="LrT-BF-wqP" firstAttribute="baseline" secondItem="Gwd-TD-kXd" secondAttribute="baseline" type="user" id="CWI-5T-eTY"/>
+                            <constraint firstAttribute="bottom" secondItem="99k-KX-Yco" secondAttribute="bottom" constant="68" id="EE7-dx-2Zu"/>
+                            <constraint firstItem="1kR-KN-vMv" firstAttribute="top" secondItem="Rlk-pe-YBS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PEg-CF-LQB"/>
+                            <constraint firstItem="C1Y-gd-z95" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="93" id="PSB-ns-9nm"/>
+                            <constraint firstAttribute="bottom" secondItem="8fZ-Kr-LHP" secondAttribute="bottom" constant="50" id="QQH-fy-vOT"/>
+                            <constraint firstItem="99k-KX-Yco" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="50" id="SsD-lL-hCe"/>
+                            <constraint firstAttribute="trailing" secondItem="Rlk-pe-YBS" secondAttribute="trailing" constant="51" id="Un0-xv-7WV"/>
+                            <constraint firstAttribute="trailing" secondItem="j7R-on-gRV" secondAttribute="trailing" constant="36" id="aGR-q3-EJp"/>
+                            <constraint firstAttribute="trailing" secondItem="1kR-KN-vMv" secondAttribute="trailing" constant="9" id="bu3-dZ-UJZ"/>
+                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="centerX" secondItem="WOl-7c-ill" secondAttribute="centerX" type="default" id="csY-nW-Zks"/>
+                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="trailing" secondItem="zv4-zw-VDJ" secondAttribute="trailing" type="default" id="eBv-tj-i78"/>
+                            <constraint firstAttribute="bottom" secondItem="C1Y-gd-z95" secondAttribute="bottom" constant="8" id="ehZ-ia-iEz"/>
+                            <constraint firstAttribute="bottom" secondItem="j7R-on-gRV" secondAttribute="bottom" constant="15" id="flZ-qX-0Uh"/>
+                            <constraint firstItem="Etm-Dz-1RK" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" constant="107" id="hZz-Qo-NWK"/>
+                            <constraint firstItem="WOl-7c-ill" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" constant="108" id="izt-pa-0tf"/>
+                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="user" id="mqW-cn-xXb"/>
+                            <constraint firstItem="LrT-BF-wqP" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" type="default" id="qv2-Nx-hAf"/>
+                        </constraints>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="lastTimeLabel" destination="C1Y-gd-z95" id="ELF-0E-jer"/>
+                        <outlet property="lb" destination="LrT-BF-wqP" id="muz-Zw-KKt"/>
+                        <outlet property="leftAIV" destination="Etm-Dz-1RK" id="0f2-5y-AJx"/>
+                        <outlet property="lpv" destination="8fZ-Kr-LHP" id="CbR-zq-bT6"/>
+                        <outlet property="ltimer" destination="99k-KX-Yco" id="lwr-ya-Url"/>
+                        <outlet property="rb" destination="Gwd-TD-kXd" id="E60-dP-6Th"/>
+                        <outlet property="rightAIV" destination="WOl-7c-ill" id="nSG-95-DHp"/>
+                        <outlet property="rpv" destination="1kR-KN-vMv" id="SXr-v3-RJ7"/>
+                        <outlet property="rtimer" destination="Rlk-pe-YBS" id="wSo-ng-adH"/>
+                        <outlet property="view" destination="zv4-zw-VDJ" id="THM-0U-7VP"/>
+                        <segue destination="1Fx-xD-AeD" kind="modal" identifier="SettingsSegue" modalTransitionStyle="partialCurl" id="9g8-Pf-F3n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="2aG-Ho-PgI">
+            <objects>
+                <viewController id="9lh-je-Epk" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oji-3H-SiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptf-7N-U0w">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ptf-7N-U0w" firstAttribute="leading" secondItem="Oji-3H-SiJ" secondAttribute="leading" type="default" id="GnK-Vb-n6Q"/>
+                            <constraint firstItem="ptf-7N-U0w" firstAttribute="trailing" secondItem="Oji-3H-SiJ" secondAttribute="trailing" type="default" id="POv-UL-BfJ"/>
+                            <constraint firstItem="ptf-7N-U0w" firstAttribute="bottom" secondItem="Oji-3H-SiJ" secondAttribute="bottom" type="default" id="RQY-Y8-gl2"/>
+                            <constraint firstItem="ptf-7N-U0w" firstAttribute="top" secondItem="Oji-3H-SiJ" secondAttribute="top" type="default" id="yXt-Gc-NBe"/>
+                        </constraints>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nZD-WJ-Bl0"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="knuzzleSite" destination="ptf-7N-U0w" id="6Mi-qs-fKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLv-iF-19Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="581"/>
+        </scene>
+        <!--My Table View Controller-->
+        <scene sceneID="nRM-Tl-bE5">
+            <objects>
+                <viewController id="1Fx-xD-AeD" customClass="MyTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="JiA-cY-OXJ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="276"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Reset" id="OOX-rI-7hl"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="tTE-3N-xE8">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="igb-eD-azm"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMb-rh-vLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="609"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Left_Hand.png" width="120" height="120"/>
+        <image name="RIght_Hand.png" width="120" height="120"/>
+        <image name="button_dark.png" width="16" height="16"/>
+    </resources>
+    <classes>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="knuzzleSite" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MammiouxViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MammiouxViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="selectB:"/>
+                <relationship kind="outlet" name="lastTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="leftAIV" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="lpv" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="ltimer" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rb" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rightAIV" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="rpv" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="rtimer" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MyTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dateAction:"/>
+                <relationship kind="action" name="doneAction:"/>
+                <relationship kind="action" name="resetAction:"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="myPickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="urlButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

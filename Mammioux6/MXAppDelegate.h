@@ -7,9 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MammiouxViewController;
+@class MyTableViewController;
+@class InfoViewController;
 
-@interface MXAppDelegate : UIResponder <UIApplicationDelegate>
+@interface MXAppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+
+// this is the MAIN navigation controller for the entire application
+// and will hold all of the main page controllers.
+@property (strong, nonatomic)NSMutableDictionary *settings;
+
+@property (nonatomic, retain) MammiouxViewController *myVC;
+@property (nonatomic, retain) MyTableViewController *settingsVC;
+@property (nonatomic, retain) InfoViewController *infoVC;
+
+
 
 @end

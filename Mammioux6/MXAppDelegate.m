@@ -7,12 +7,49 @@
 //
 
 #import "MXAppDelegate.h"
+#import "MammiouxViewController.h"
+#import "MyTableViewController.h"
 
 @implementation MXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+	// read the current settings
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	
+	
+    
+	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"firstTime"]==nil ){
+		NSLog(@"first time use");
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MAMMIOUX" message:@"First Time use"
+													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		[alert show];
+		
+        // get default settings from file
+		NSString *filename = @"timers.plist";
+		NSString *path = [[NSBundle mainBundle] bundlePath];
+		NSString *fullPath = [path stringByAppendingPathComponent:filename];
+		_settings = [[NSMutableDictionary alloc] initWithContentsOfFile:fullPath];
+        // add default values to user defaults
+		NSLog(@"Dump Settings");
+		for (id key in _settings)
+		{
+			NSLog(@"key: %@, value: %@", key, [_settings objectForKey:key]);
+			[[NSUserDefaults standardUserDefaults] setObject:[_settings objectForKey:key] forKey:key];
+		}
+		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstTime"];
+		NSDictionary *appDefaults = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
+        //register persistent domain
+		[defaults setPersistentDomain:appDefaults forName:@"mammioux"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+	
+	
+    // remove the status bar.
+	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [self.window makeKeyAndVisible];
+	
     return YES;
 }
 							
