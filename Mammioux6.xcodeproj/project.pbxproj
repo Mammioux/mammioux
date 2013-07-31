@@ -22,8 +22,8 @@
 		863C18D617A2F726005A6E84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C18B117A2F725005A6E84 /* Foundation.framework */; };
 		863C18DE17A2F726005A6E84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 863C18DC17A2F726005A6E84 /* InfoPlist.strings */; };
 		863C18E117A2F726005A6E84 /* Mammioux6Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18E017A2F726005A6E84 /* Mammioux6Tests.m */; };
-		863C18F817A2F7AC005A6E84 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EC17A2F7AC005A6E84 /* MyTableViewController.m */; };
-		863C18F917A2F7AC005A6E84 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EC17A2F7AC005A6E84 /* MyTableViewController.m */; };
+		863C18F817A2F7AC005A6E84 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EC17A2F7AC005A6E84 /* SettingsViewController.m */; };
+		863C18F917A2F7AC005A6E84 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EC17A2F7AC005A6E84 /* SettingsViewController.m */; };
 		863C18FA17A2F7AC005A6E84 /* MammiouxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EE17A2F7AC005A6E84 /* MammiouxViewController.m */; };
 		863C18FB17A2F7AC005A6E84 /* MammiouxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EE17A2F7AC005A6E84 /* MammiouxViewController.m */; };
 		863C18FE17A2F7AC005A6E84 /* TimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F217A2F7AC005A6E84 /* TimerController.m */; };
@@ -64,6 +64,8 @@
 		863C19DA17A31C7A005A6E84 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D717A31C79005A6E84 /* icon2.png */; };
 		863C19DC17A31C98005A6E84 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19DB17A31C98005A6E84 /* icon.png */; };
 		863C19DE17A31CA4005A6E84 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19DD17A31CA3005A6E84 /* icon@2x.png */; };
+		864722C417A849F0005E9160 /* NumericCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864722C317A849F0005E9160 /* NumericCell.xib */; };
+		864722C917A850B7005E9160 /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 864722C817A850B7005E9160 /* NumericCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,8 +99,8 @@
 		863C18DD17A2F726005A6E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		863C18DF17A2F726005A6E84 /* Mammioux6Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mammioux6Tests.h; sourceTree = "<group>"; };
 		863C18E017A2F726005A6E84 /* Mammioux6Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mammioux6Tests.m; sourceTree = "<group>"; };
-		863C18EB17A2F7AC005A6E84 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
-		863C18EC17A2F7AC005A6E84 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		863C18EB17A2F7AC005A6E84 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		863C18EC17A2F7AC005A6E84 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		863C18ED17A2F7AC005A6E84 /* MammiouxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MammiouxViewController.h; sourceTree = "<group>"; };
 		863C18EE17A2F7AC005A6E84 /* MammiouxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MammiouxViewController.m; sourceTree = "<group>"; };
 		863C18F117A2F7AC005A6E84 /* TimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerController.h; sourceTree = "<group>"; };
@@ -127,6 +129,9 @@
 		863C19D717A31C79005A6E84 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		863C19DB17A31C98005A6E84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		863C19DD17A31CA3005A6E84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		864722C317A849F0005E9160 /* NumericCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumericCell.xib; path = ../NumericCell.xib; sourceTree = "<group>"; };
+		864722C717A850B7005E9160 /* NumericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumericCell.h; path = Mammioux6/Resources/NumericCell.h; sourceTree = SOURCE_ROOT; };
+		864722C817A850B7005E9160 /* NumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumericCell.m; path = Mammioux6/Resources/NumericCell.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,8 +241,8 @@
 		863C18EA17A2F771005A6E84 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				863C18EB17A2F7AC005A6E84 /* MyTableViewController.h */,
-				863C18EC17A2F7AC005A6E84 /* MyTableViewController.m */,
+				863C18EB17A2F7AC005A6E84 /* SettingsViewController.h */,
+				863C18EC17A2F7AC005A6E84 /* SettingsViewController.m */,
 				863C18ED17A2F7AC005A6E84 /* MammiouxViewController.h */,
 				863C18EE17A2F7AC005A6E84 /* MammiouxViewController.m */,
 				863C18F117A2F7AC005A6E84 /* TimerController.h */,
@@ -253,6 +258,7 @@
 		863C190617A2F7C5005A6E84 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				864722C517A84FFF005E9160 /* tableViewCells */,
 				863C190D17A2F82A005A6E84 /* Images */,
 				863C18F717A2F7AC005A6E84 /* InfoViewController.xib */,
 				863C190A17A2F802005A6E84 /* MammiouxViewController.xib */,
@@ -279,6 +285,17 @@
 				863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		864722C517A84FFF005E9160 /* tableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				864722C317A849F0005E9160 /* NumericCell.xib */,
+				864722C717A850B7005E9160 /* NumericCell.h */,
+				864722C817A850B7005E9160 /* NumericCell.m */,
+			);
+			name = tableViewCells;
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +394,7 @@
 				863C19DA17A31C7A005A6E84 /* icon2.png in Resources */,
 				863C19DC17A31C98005A6E84 /* icon.png in Resources */,
 				863C19DE17A31CA4005A6E84 /* icon@2x.png in Resources */,
+				864722C417A849F0005E9160 /* NumericCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,11 +444,12 @@
 			files = (
 				863C18BC17A2F725005A6E84 /* main.m in Sources */,
 				863C18C017A2F725005A6E84 /* MXAppDelegate.m in Sources */,
-				863C18F817A2F7AC005A6E84 /* MyTableViewController.m in Sources */,
+				863C18F817A2F7AC005A6E84 /* SettingsViewController.m in Sources */,
 				863C18FA17A2F7AC005A6E84 /* MammiouxViewController.m in Sources */,
 				863C18FE17A2F7AC005A6E84 /* TimerController.m in Sources */,
 				863C190017A2F7AC005A6E84 /* mammiouxLog.m in Sources */,
 				863C190217A2F7AC005A6E84 /* InfoViewController.m in Sources */,
+				864722C917A850B7005E9160 /* NumericCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				863C18E117A2F726005A6E84 /* Mammioux6Tests.m in Sources */,
-				863C18F917A2F7AC005A6E84 /* MyTableViewController.m in Sources */,
+				863C18F917A2F7AC005A6E84 /* SettingsViewController.m in Sources */,
 				863C18FB17A2F7AC005A6E84 /* MammiouxViewController.m in Sources */,
 				863C18FF17A2F7AC005A6E84 /* TimerController.m in Sources */,
 				863C190117A2F7AC005A6E84 /* mammiouxLog.m in Sources */,
@@ -616,6 +635,7 @@
 				863C18E617A2F726005A6E84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		863C18E717A2F726005A6E84 /* Build configuration list for PBXNativeTarget "Mammioux6Tests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +644,7 @@
 				863C18E917A2F726005A6E84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,7 @@
 
 #import "MXAppDelegate.h"
 #import "MammiouxViewController.h"
-#import "MyTableViewController.h"
+#import "SettingsViewController.h"
 
 @implementation MXAppDelegate
 

@@ -161,11 +161,12 @@
                         <outlet property="rpv" destination="1kR-KN-vMv" id="SXr-v3-RJ7"/>
                         <outlet property="rtimer" destination="Rlk-pe-YBS" id="wSo-ng-adH"/>
                         <outlet property="view" destination="zv4-zw-VDJ" id="THM-0U-7VP"/>
-                        <segue destination="1Fx-xD-AeD" kind="modal" identifier="SettingsSegue" modalTransitionStyle="partialCurl" id="9g8-Pf-F3n"/>
+                        <segue destination="4MX-wU-U83" kind="modal" identifier="SettingsSegue" modalTransitionStyle="flipHorizontal" id="dns-Ts-3vn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-359" y="116"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="2aG-Ho-PgI">
@@ -200,28 +201,60 @@
             </objects>
             <point key="canvasLocation" x="89" y="581"/>
         </scene>
-        <!--My Table View Controller-->
-        <scene sceneID="nRM-Tl-bE5">
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="rwv-ml-DIP">
             <objects>
-                <viewController id="1Fx-xD-AeD" customClass="MyTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="JiA-cY-OXJ">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="276"/>
+                <tableViewController id="uFt-ug-PqF" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uUf-8R-5TM">
+                        <rect key="frame" x="0.0" y="64" width="480" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oRk-BR-dh5">
+                                <rect key="frame" x="0.0" y="22" width="480" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Reset" id="OOX-rI-7hl"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="tTE-3N-xE8">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="igb-eD-azm"/>
+                    <navigationItem key="navigationItem" title="Settings" id="hAY-tg-d5D">
+                        <barButtonItem key="backBarButtonItem" title="Timer" id="WqQ-5V-jzV">
+                            <connections>
+                                <action selector="doneAction:" destination="uFt-ug-PqF" id="5Ff-yj-TB7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="bRE-Ez-eU7"/>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="WqQ-5V-jzV" id="lDf-Rh-GSt"/>
+                        </connections>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xMb-rh-vLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="resetButton" destination="bRE-Ez-eU7" id="iHm-du-bxo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHa-Q2-OLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="609"/>
+            <point key="canvasLocation" x="769" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pSV-hR-oe4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="4MX-wU-U83" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z3Q-Pe-8tN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uFt-ug-PqF" kind="relationship" relationship="rootViewController" id="HAV-14-aRV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9C-IV-xQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="124"/>
         </scene>
     </scenes>
     <resources>
@@ -251,8 +284,11 @@
                 <relationship kind="outlet" name="rtimer" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="MyTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableViewController.h"/>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="dateAction:"/>
                 <relationship kind="action" name="doneAction:"/>
@@ -263,9 +299,6 @@
                 <relationship kind="outlet" name="resetButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="urlButton" candidateClass="UIButton"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

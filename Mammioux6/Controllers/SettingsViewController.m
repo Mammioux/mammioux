@@ -5,7 +5,7 @@
  
  */
 
-#import "MyTableViewController.h"
+#import "SettingsViewController.h"
 
 #define kTextFieldWidth	       50.0
 #define kLeftMargin				20.0
@@ -17,7 +17,7 @@
 
 #define kViewTag			1		// for tagging our embedded controls for removal at cell recycle time
 
-@implementation MyTableViewController
+@implementation SettingsViewController
 
 @synthesize datePicker, doneButton, dataArray, dateFormatter, textField2,urlButton, resetButton;
 @synthesize myPickerView;
@@ -151,15 +151,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell *targetCell = [tableView cellForRowAtIndexPath:indexPath];
-	CGRect newFrame = self.tableView.frame;
+
 	switch (indexPath.row) {
 		case 1:
 			if (![self.datePicker isHidden]) [self.datePicker removeFromSuperview]; 
 			if (![self.myPickerView isHidden]) [self.myPickerView removeFromSuperview];
 			
 			NSLog(@"case number");
-			CGRect frame = CGRectMake(newFrame.origin.x+newFrame.size.width-90, 8.0, 60, kTextFieldHeight);
-			textField2 = [[UITextField alloc] initWithFrame:frame];
+			
+			textField2 = [[UITextField alloc] init];
 			
 			textField2.borderStyle = UITextBorderStyleNone;
 			textField2.textColor = [UIColor blackColor];
@@ -203,7 +203,7 @@
 {
 	static NSString *kCustomCellID = @"CustomCellID";
 	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCustomCellID];
+	 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCustomCellID];
 	if (cell == nil)
 	{
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID] ;

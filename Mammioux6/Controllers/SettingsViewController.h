@@ -47,19 +47,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyTableViewController : UITableViewController <UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+@interface SettingsViewController : UITableViewController <UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 {
-@private
-	UIDatePicker *datePicker;
-	UIPickerView *myPickerView;
-	UIBarButtonItem *doneButton;	// this button appears only when the date picker is open
-	UIBarButtonItem *resetButton;
-	
-	NSArray *dataArray;
-	
-	NSDateFormatter *dateFormatter;
-	UITextField *textField2;
-	UIButton *urlButton;
+
 }
 
 @property (nonatomic, retain) IBOutlet UIDatePicker *datePicker; 

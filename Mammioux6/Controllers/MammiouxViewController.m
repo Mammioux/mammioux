@@ -9,7 +9,7 @@
 #import "MammiouxViewController.h"
 #import "TimerController.h"
 #import "mammiouxLog.h"
-#import "MyTableViewController.h"
+#import "SettingsViewController.h"
 
 @implementation MammiouxViewController
 
@@ -304,7 +304,7 @@
 	}
 }
 
-- (void)MyTableViewControllerDidFinish:(MyTableViewController *)controller {
+- (void)MyTableViewControllerDidFinish:(SettingsViewController *)controller {
     
 	[self  dismissViewControllerAnimated:YES completion:nil];
 }
