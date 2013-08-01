@@ -46,7 +46,7 @@
 	[self.urlButton setBackgroundColor:[UIColor clearColor]];
 	
 	
-	[self.urlButton addTarget:self action:@selector(jumpToKnuzzleSite:) forControlEvents:UIControlEventTouchUpInside];
+	[self.urlButton addTarget:self action:@selector(jumpToMammiouxSite:) forControlEvents:UIControlEventTouchUpInside];
 	
 	self.tableView.tableFooterView=urlButton;	
 }
@@ -323,8 +323,9 @@
 	
 }
 
-- (void)jumpToKnuzzleSite:(id)sender {
+- (void)jumpToMammiouxSite:(id)sender {
 	// gain access to the delegate and send a message to switch to a particular view.
+    [self.navigationController.viewControllers[0] performSegueWithIdentifier:@"InfoSegue" sender:self];
 }
 
 -(void)displayDatePicker:(UITableViewCell *)targetCell  {

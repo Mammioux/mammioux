@@ -129,7 +129,7 @@
 		863C19D717A31C79005A6E84 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		863C19DB17A31C98005A6E84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		863C19DD17A31CA3005A6E84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		864722C317A849F0005E9160 /* NumericCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumericCell.xib; path = ../NumericCell.xib; sourceTree = "<group>"; };
+		864722C317A849F0005E9160 /* NumericCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumericCell.xib; path = Mammioux6/Resources/NumericCell.xib; sourceTree = SOURCE_ROOT; };
 		864722C717A850B7005E9160 /* NumericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumericCell.h; path = Mammioux6/Resources/NumericCell.h; sourceTree = SOURCE_ROOT; };
 		864722C817A850B7005E9160 /* NumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumericCell.m; path = Mammioux6/Resources/NumericCell.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */

@@ -12,6 +12,6 @@
 
 @property (nonatomic,retain) IBOutlet UILabel *nameLabel;
 @property (nonatomic,retain) IBOutlet UITextField *entryValue;
-@property (nonatomic, readonly) IBOutlet UILabel *entrySetValue;
+@property (nonatomic, retain) IBOutlet UILabel *entrySetValue;
 
 @end

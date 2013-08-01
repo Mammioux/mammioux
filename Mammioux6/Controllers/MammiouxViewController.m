@@ -68,8 +68,7 @@
 	lpv.progress = 0;
 	rpv.progress = 0;
 	
-	klog = [mammiouxLog alloc];
-	klog = [klog init];
+	klog = [[mammiouxLog alloc] init];
 	NSDate *lastSession = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastSession"];
 	
 	NSLog(@"Last Session: %@",lastSession.description);
@@ -309,15 +308,16 @@
 	[self  dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)showSettings {   
-	
-	// gain access to the delegate and send a message to switch to a particular view.
-        [self performSegueWithIdentifier:@"SettingsSegue" sender:self];
-}
-- (IBAction)showInfo {   
+- (IBAction)showSettings {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 	
 	// gain access to the delegate and send a message to switch to a particular view.
     [self performSegueWithIdentifier:@"SettingsSegue" sender:self];
+}
+- (IBAction)showInfo {   
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+	// gain access to the delegate and send a message to switch to a particular view.
+    [self performSegueWithIdentifier:@"InfoSegue" sender:self];
 }
 
 -(void) singleTap {
@@ -374,7 +374,7 @@
 	NSLog(@"Main View will appear");
 	[super viewWillAppear:animated];
 	// gain access to the delegate and send a message to switch to a particular view.
-	[self.navigationController setNavigationBarHidden:YES animated:YES];
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
 	
 }
 
