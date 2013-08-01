@@ -14,4 +14,8 @@
 @property (nonatomic,retain) IBOutlet UITextField *entryValue;
 @property (nonatomic, retain) IBOutlet UILabel *detail;
 
++ (NSString *) identifier;
++ (NSString *) nibName;
+
+
 @end

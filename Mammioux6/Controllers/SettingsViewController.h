@@ -47,6 +47,7 @@
 
 #import <UIKit/UIKit.h>
 @class SettingsView;
+@class NumericCell;
 
 @interface SettingsViewController : UITableViewController <UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 {
@@ -61,7 +62,9 @@
 @property (nonatomic, retain) IBOutlet SettingsView *view;
 @property (nonatomic, retain) NSArray *dataArray; 
 @property (nonatomic, retain) NSDateFormatter *dateFormatter; 
-@property (nonatomic, retain) UITextField *textField2;
+@property (strong, nonatomic) IBOutlet NumericCell *numCell;
+@property (strong, nonatomic) UINib *NumericCellNib;
+
 
 - (IBAction)doneAction:(id)sender;	// when the done button is clicked
 - (IBAction)dateAction:(id)sender;	// when the user has changed the date picke values 

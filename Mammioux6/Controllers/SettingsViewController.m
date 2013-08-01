@@ -21,7 +21,7 @@
 
 @implementation SettingsViewController
 
-@synthesize datePicker, doneButton, dataArray, dateFormatter, textField2,urlButton, resetButton;
+@synthesize datePicker, doneButton, dataArray, dateFormatter,urlButton, resetButton;
 @synthesize myPickerView;
 
 
@@ -51,7 +51,7 @@
 	
 	[self.urlButton addTarget:self action:@selector(jumpToMammiouxSite:) forControlEvents:UIControlEventTouchUpInside];
 	
-	self.tableView.tableFooterView=urlButton;	
+	self.tableView.tableFooterView=urlButton;
 }
 
 - (void)viewDidUnload
@@ -183,12 +183,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSString *kCustomCellID = indexPath.row == 0? @"DateCellID":@"NumericCellId";
-    NumericCell *numCell;
+    //NumericCell *numCell;
     UITableViewCell *cell;
 
     if (indexPath.row ==0) {
         kCustomCellID = @"DateCellId";
-        cell = [tableView dequeueReusableCellWithIdentifier:kCustomCellID];
+        cell = [self.tableView dequeueReusableCellWithIdentifier:kCustomCellID];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID];
         }
@@ -197,29 +197,32 @@
 
     } else {
         kCustomCellID = @"NumericCellId";
-        numCell = (NumericCell *)[tableView dequeueReusableCellWithIdentifier:kCustomCellID];
-        if (numCell == nil) {
-            numCell = [[NumericCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID];
+        _numCell = (NumericCell *)[tableView dequeueReusableCellWithIdentifier:kCustomCellID];
+        if (_numCell == nil) {
+            _numCell = [[NumericCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID];
+           [self.NumericCellNib instantiateWithOwner:self options:nil];
         }
-            numCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        _numCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
             switch (indexPath.row) {
                 case 1:{
-                    numCell.entryValue.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"feedingsDay"] stringValue];
-                    numCell.detail.text = numCell.entryValue.text;
-                    numCell.detailTextLabel.text = numCell.entryValue.text;
+                    _numCell.entryValue.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"feedingsDay"] stringValue];
+                    _numCell.detail.text = _numCell.entryValue.text;
+                    _numCell.title.text = [self.dataArray objectAtIndex:indexPath.row];
+                    _numCell.detailTextLabel.text = _numCell.entryValue.text;
                 }
                     break;
                 case 2:
-                    numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"lstimer"] stringValue];
+                    _numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"lstimer"] stringValue];
                     break;
                 case 3:
-                    numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"rstimer"] stringValue];
+                    _numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"rstimer"] stringValue];
                     break;
                 default:
                     break;
             }
-        numCell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
-        return numCell;
+        _numCell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+        return _numCell;
     }
 	
 	return cell;
@@ -280,7 +283,6 @@
 	// deselect the current table row
 	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-	[textField2 removeFromSuperview];
 }
 
 - (IBAction)resetAction:(id)sender
@@ -298,7 +300,6 @@
 	self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
 	// check if other picker is visible
 	if (![self.myPickerView isHidden]) [self.myPickerView removeFromSuperview]; 
-	[self.textField2 removeFromSuperview];
 	// check if our date picker is already on screen
 	if (self.datePicker.superview == nil){
 		[self.view.superview insertSubview: self.datePicker belowSubview: self.tableView];
@@ -345,7 +346,6 @@
 	[self.myPickerView selectRow: [targetCell.detailTextLabel.text intValue] inComponent:0 animated:NO];
 	// check if other picker is visible
 	if (![self.datePicker isHidden]) [self.datePicker removeFromSuperview]; 
-	[self.textField2 removeFromSuperview];
 	// check if our picker is already on screen
 	if (self.myPickerView.superview == nil){
 		
@@ -388,5 +388,16 @@
 	}
 }
 
+#pragma mark UINib
+
+- (UINib *)NumericCellNib
+{
+    NSLog(@"Loading Numeric Cell Nib only once");
+    if (!_NumericCellNib)
+    {
+        _NumericCellNib = [UINib nibWithNibName:@"NumericCellId" bundle:nil];
+    }
+    return _NumericCellNib;
+}
 @end
 
