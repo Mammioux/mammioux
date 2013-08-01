@@ -6,6 +6,8 @@
  */
 
 #import "SettingsViewController.h"
+#import "SettingsView.h"
+#import "NumericCell.h"
 
 #define kTextFieldWidth	       50.0
 #define kLeftMargin				20.0
@@ -21,6 +23,7 @@
 
 @synthesize datePicker, doneButton, dataArray, dateFormatter, textField2,urlButton, resetButton;
 @synthesize myPickerView;
+
 
 - (void)viewDidLoad
 {
@@ -157,30 +160,8 @@
 			if (![self.datePicker isHidden]) [self.datePicker removeFromSuperview]; 
 			if (![self.myPickerView isHidden]) [self.myPickerView removeFromSuperview];
 			
-			NSLog(@"case number");
-			
-			textField2 = [[UITextField alloc] init];
-			
-			textField2.borderStyle = UITextBorderStyleNone;
-			textField2.textColor = [UIColor blackColor];
-			textField2.font = [UIFont systemFontOfSize:17.0];
-			textField2.text =  targetCell.detailTextLabel.text;
-			[[NSUserDefaults standardUserDefaults] setInteger:[targetCell.detailTextLabel.text intValue] forKey:@"feedingsDay"];
-			
-			
-			textField2.backgroundColor = [UIColor whiteColor];
-			textField2.autocorrectionType = UITextAutocorrectionTypeNo;	// no auto correction support
-			
-			textField2.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-			textField2.returnKeyType = UIReturnKeyDone;
-			
-			textField2.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
-			
-			textField2.tag = 1;		// tag this control so we can remove it later for recycled cells
-			
-			textField2.delegate = self;	// let us be the delegate so we know when the keyboard's "Done" button is pressed
-			
-			[targetCell.contentView addSubview:textField2];
+			NSLog(@"Clicked on Numeric Cell");
+            [targetCell setEditing:!targetCell.editing animated:NO];
 			
 			break;
 			
@@ -201,43 +182,45 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	static NSString *kCustomCellID = @"CustomCellID";
-	
-	 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCustomCellID];
-	if (cell == nil)
-	{
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID] ;
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	}
-	else
-	{
-		// the cell is being recycled, remove old embedded controls
-		UIView *viewToRemove = nil;
-		viewToRemove = [cell.contentView viewWithTag:kViewTag];
-		if (viewToRemove)
-			[viewToRemove removeFromSuperview];
-	}
-	
-	
-	cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
-	switch (indexPath.row) {
-		case 1:
-			cell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"feedingsDay"] stringValue];
-			break;
-		case 0:
-			cell.detailTextLabel.text = [self.dateFormatter stringFromDate:[[NSUserDefaults standardUserDefaults] objectForKey:@"lastSession"]];
-			break;
-		case 2:
-			cell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"lstimer"] stringValue];
-			break;
-		case 3:
-			cell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"rstimer"] stringValue];
-			break;
-		default:
-			break;
-	}
-//	UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//	[cell.contentView addSubview:button];
+	NSString *kCustomCellID = indexPath.row == 0? @"DateCellID":@"NumericCellId";
+    NumericCell *numCell;
+    UITableViewCell *cell;
+
+    if (indexPath.row ==0) {
+        kCustomCellID = @"DateCellId";
+        cell = [tableView dequeueReusableCellWithIdentifier:kCustomCellID];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID];
+        }
+        cell.detailTextLabel.text = [self.dateFormatter stringFromDate:[[NSUserDefaults standardUserDefaults] objectForKey:@"lastSession"]];
+        cell.textLabel.text = [self.dataArray objectAtIndex:0];
+
+    } else {
+        kCustomCellID = @"NumericCellId";
+        numCell = (NumericCell *)[tableView dequeueReusableCellWithIdentifier:kCustomCellID];
+        if (numCell == nil) {
+            numCell = [[NumericCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID];
+        }
+            numCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            switch (indexPath.row) {
+                case 1:{
+                    numCell.entryValue.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"feedingsDay"] stringValue];
+                    numCell.detail.text = numCell.entryValue.text;
+                    numCell.detailTextLabel.text = numCell.entryValue.text;
+                }
+                    break;
+                case 2:
+                    numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"lstimer"] stringValue];
+                    break;
+                case 3:
+                    numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"rstimer"] stringValue];
+                    break;
+                default:
+                    break;
+            }
+        numCell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+        return numCell;
+    }
 	
 	return cell;
 }
@@ -305,24 +288,6 @@
 	NSLog(@"reset to default");
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-	if (textField == textField2 && indexPath.row == 1){
-		// the user pressed the "Done" button, so dismiss the keyboard
-		
-		NSLog(@"Row :%d",indexPath.row);
-		UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-		cell.detailTextLabel.text = textField2.text;
-		[[NSUserDefaults standardUserDefaults] setInteger:[cell.detailTextLabel.text intValue] forKey:@"feedingsDay"];
-		[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-	}
-	[self.textField2 removeFromSuperview];
-	[textField resignFirstResponder];
-	return YES;
-	
-}
-
 - (void)jumpToMammiouxSite:(id)sender {
 	// gain access to the delegate and send a message to switch to a particular view.
     [self.navigationController.viewControllers[0] performSegueWithIdentifier:@"InfoSegue" sender:self];
@@ -337,7 +302,7 @@
 	// check if our date picker is already on screen
 	if (self.datePicker.superview == nil){
 		[self.view.superview insertSubview: self.datePicker belowSubview: self.tableView];
-		NSLog(@"View Controller Orientation %d",self.interfaceOrientation);
+		NSLog(@"Showing Date Picker");
 		// size up the picker view to our screen and compute the start/end frame origin for our slide up animation
 		//
 		// compute the start frame

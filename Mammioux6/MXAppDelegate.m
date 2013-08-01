@@ -21,7 +21,6 @@
 	
     
 	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"firstTime"]==nil ){
-		NSLog(@"first time use");
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MAMMIOUX" message:@"First Time use"
 													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 		[alert show];

@@ -46,6 +46,7 @@
  */
 
 #import <UIKit/UIKit.h>
+@class SettingsView;
 
 @interface SettingsViewController : UITableViewController <UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 {
@@ -57,6 +58,7 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *resetButton;
 @property (nonatomic, retain) IBOutlet UIButton *urlButton;
+@property (nonatomic, retain) IBOutlet SettingsView *view;
 @property (nonatomic, retain) NSArray *dataArray; 
 @property (nonatomic, retain) NSDateFormatter *dateFormatter; 
 @property (nonatomic, retain) UITextField *textField2;

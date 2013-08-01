@@ -225,22 +225,95 @@
         <scene sceneID="rwv-ml-DIP">
             <objects>
                 <tableViewController id="uFt-ug-PqF" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uUf-8R-5TM">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uUf-8R-5TM">
                         <rect key="frame" x="0.0" y="44" width="480" height="276"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="NumericCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsCell" id="oRk-BR-dh5" customClass="NumericCell">
-                                <rect key="frame" x="0.0" y="22" width="480" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NumericCellId" editingAccessoryType="disclosureIndicator" id="U66-EA-QbD" customClass="NumericCell">
+                                <rect key="frame" x="0.0" y="46" width="480" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="43"/>
+                                    <rect key="frame" x="10" y="1" width="440" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmY-gQ-LjU">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Ftz-HW-1ak"/>
+                                                <constraint firstAttribute="width" constant="42" id="ZIh-Uw-Mxj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TA-5B-lzc">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="51" id="V9T-FM-Nda"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnP-yc-6j6">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="97" id="IeL-QK-oG7"/>
+                                                <constraint firstAttribute="height" constant="30" id="lFW-IC-ecb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="U66-EA-QbD" id="Hit-F6-4nx"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="JmY-gQ-LjU" firstAttribute="leading" secondItem="U66-EA-QbD" secondAttribute="leading" constant="57" id="5RG-qu-Dyt"/>
+                                    <constraint firstItem="jnP-yc-6j6" firstAttribute="centerY" secondItem="0TA-5B-lzc" secondAttribute="centerY" type="default" id="FeH-Mm-Ify"/>
+                                    <constraint firstAttribute="trailing" secondItem="jnP-yc-6j6" secondAttribute="trailing" constant="28" id="Lsu-Pt-ZYU"/>
+                                    <constraint firstItem="0TA-5B-lzc" firstAttribute="bottom" secondItem="JmY-gQ-LjU" secondAttribute="bottom" type="default" id="act-Go-rkR"/>
+                                    <constraint firstItem="jnP-yc-6j6" firstAttribute="centerY" secondItem="U66-EA-QbD" secondAttribute="centerY" type="default" id="hyH-Dh-gag"/>
+                                    <constraint firstItem="0TA-5B-lzc" firstAttribute="top" secondItem="JmY-gQ-LjU" secondAttribute="top" type="default" id="mU7-hC-dVg"/>
+                                    <constraint firstAttribute="trailing" secondItem="0TA-5B-lzc" secondAttribute="trailing" constant="39" id="ooI-qK-eyu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="detail" destination="0TA-5B-lzc" id="iYK-EA-6us"/>
+                                    <outlet property="entryValue" destination="jnP-yc-6j6" id="l4l-gI-3QH"/>
+                                    <outlet property="title" destination="JmY-gQ-LjU" id="D2S-4E-JxA"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DateCellId" editingAccessoryType="disclosureIndicator" textLabel="Ggh-N5-XF2" detailTextLabel="fkb-RB-ad4" imageView="qcC-Aa-3NJ" style="IBUITableViewCellStyleValue1" id="TgD-Ja-WYE">
+                                <rect key="frame" x="0.0" y="91" width="480" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="440" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggh-N5-XF2">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkb-RB-ad4">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Clock.jpg" id="qcC-Aa-3NJ">
+                                            <rect key="frame" x="6" y="6" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uFt-ug-PqF" id="uaA-Ai-eOG"/>
+                            <outlet property="delegate" destination="uFt-ug-PqF" id="bMV-5U-y74"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="hAY-tg-d5D">
                         <barButtonItem key="backBarButtonItem" title="Done" id="WqQ-5V-jzV">
@@ -261,10 +334,62 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Clock.jpg" width="30" height="30"/>
         <image name="Left_Hand.png" width="120" height="120"/>
         <image name="RIght_Hand.png" width="120" height="120"/>
         <image name="button_dark.png" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="knuzzleSite" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MammiouxViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MammiouxViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="selectB:"/>
+                <relationship kind="outlet" name="lastTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="leftAIV" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="lpv" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="ltimer" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rb" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rightAIV" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="rpv" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="rtimer" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NumericCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NumericCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detail" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="entryValue" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SettingsView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsView.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dateAction:"/>
+                <relationship kind="action" name="doneAction:"/>
+                <relationship kind="action" name="resetAction:"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="myPickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="urlButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="view" candidateClass="SettingsView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -25,13 +25,13 @@
 
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-        NSLog(@"Init with nib");
-    }
-    return self;
-}
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+//    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+//        // Custom initialization
+//        NSLog(@"Init with nib");
+//    }
+//    return self;
+//}
 
 
 /*
@@ -92,12 +92,12 @@
 
 -(void) selectB: (id)sender {
 	
-	NSLog(@"Button Selected: %@",(sender == rb)?@"RIGHT":@"LEFT");
+	//NSLog(@"Button Selected: %@",(sender == rb)?@"RIGHT":@"LEFT");
 	[self toggleButton: sender];
 }
 
 - (void) saveSettings {
-	NSLog(@"synchronize settings");
+	//NSLog(@"synchronize settings");
 	[[NSUserDefaults standardUserDefaults] setInteger:lstimer/60 forKey:@"lstimer"];
 	[[NSUserDefaults standardUserDefaults] setInteger: rstimer/60 forKey:@"rstimer"];
 	[[NSUserDefaults standardUserDefaults] setBool: leftActive forKey:@"leftsidelast"];
@@ -125,12 +125,12 @@
 {
 	if( ((aButton == rb ) && leftActive) || ((aButton ==lb) && !leftActive))
 	{
-		NSLog(@"Tapped other button");
+		//NSLog(@"Tapped other button");
 		[self toggleSide];
 	}
 	else 
 	{
-		NSLog(@"Tapped same button");
+		//NSLog(@"Tapped same button");
 		[self switchTimer:leftActive];
 	}
 	
@@ -141,7 +141,7 @@
 	[self activateSide:!lslast];
 	[self inactSide:lslast];
 	leftActive = !lslast;
-	NSLog(@"leftsidelast: %d",leftActive);
+	//NSLog(@"leftsidelast: %d",leftActive);
 	[[NSUserDefaults standardUserDefaults] setBool:leftActive forKey:@"leftsidelast"];
 }
 
@@ -157,7 +157,7 @@
 }
 
 -(void) toggleSide {
-	NSLog(@"ToggleSide");
+	//NSLog(@"ToggleSide");
 	if (started == NO)
 	{
 		[klog addToLog:@"SF"];
@@ -274,13 +274,13 @@
 	
 	if (lsLast) {
 		if(	[ltc.secondsTimer isValid]) {
-			NSLog(@"Stopping Left side");
+			//NSLog(@"Stopping Left side");
 			[self stopTimer:ltc];
 			[klog addToLog:@"TL"];
 			[leftAIV stopAnimating];
 		}
 		else {
-			NSLog(@"Start Left Side");
+			//NSLog(@"Start Left Side");
 			[self startTimer:ltc];
 			[klog addToLog:@"SL"];
 			[leftAIV startAnimating];
@@ -289,13 +289,13 @@
 	else 
 	{
 		if(	[rtc.secondsTimer isValid]) {
-			NSLog(@"Stop Right Side");
+			//NSLog(@"Stop Right Side");
 			[self stopTimer:rtc];
 			[klog addToLog:@"TR"];
 			[rightAIV stopAnimating];
 		}
 		else {
-			NSLog(@"Start Right Side");
+			//NSLog(@"Start Right Side");
 			[self startTimer:rtc];
 			[klog addToLog:@"SL"];
 			[rightAIV startAnimating];
@@ -321,18 +321,18 @@
 }
 
 -(void) singleTap {
-	NSLog(@"single tap on screen, ignore");
+	//NSLog(@"single tap on screen, ignore");
 }
 
 -(void) doubleTap {
-	NSLog(@"double tap on screen, go to settings");
+	//NSLog(@"double tap on screen, go to settings");
 	[self showSettings];
 }
 -(void) tripleTap {
-	NSLog(@"triple tap on screen, ignore");
+	//NSLog(@"triple tap on screen, ignore");
 }
 -(void) quadrupleTap {
-	NSLog(@"quadruple tap on screen, ignore");
+	//NSLog(@"quadruple tap on screen, ignore");
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -371,7 +371,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	NSLog(@"Main View will appear");
 	[super viewWillAppear:animated];
 	// gain access to the delegate and send a message to switch to a particular view.
 	[self.navigationController setNavigationBarHidden:YES animated:NO];

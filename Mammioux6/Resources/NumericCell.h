@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NumericCell : UITableViewCell
+@interface NumericCell : UITableViewCell <UITextFieldDelegate>
 
-@property (nonatomic,retain) IBOutlet UILabel *nameLabel;
+@property (nonatomic,retain) IBOutlet UILabel *title;
 @property (nonatomic,retain) IBOutlet UITextField *entryValue;
-@property (nonatomic, retain) IBOutlet UILabel *entrySetValue;
+@property (nonatomic, retain) IBOutlet UILabel *detail;
 
 @end

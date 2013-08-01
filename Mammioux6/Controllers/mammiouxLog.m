@@ -16,7 +16,6 @@
 - (id)init
 
 {
-	NSLog(@"Initializing Log");
     if ((self = [super init])) {
 		//create array to keep log
 		currentLog = [[NSMutableArray alloc] init];
@@ -92,8 +91,8 @@
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"HH:mm:ss"];
 	NSString *formattedDateString = [dateFormatter stringFromDate:currentTime];
-	NSLog(@"formattedDateString: %@", formattedDateString);
-	NSLog(@"Testing %@",currentTime.description);
+//	NSLog(@"formattedDateString: %@", formattedDateString);
+//	NSLog(@"Testing %@",currentTime.description);
 	return formattedDateString;
 }
 @end
