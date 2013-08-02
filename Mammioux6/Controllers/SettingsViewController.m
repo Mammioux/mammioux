@@ -22,7 +22,6 @@
 @implementation SettingsViewController
 
 @synthesize datePicker, doneButton, dataArray, dateFormatter,urlButton, resetButton;
-@synthesize myPickerView;
 
 
 - (void)viewDidLoad
@@ -64,7 +63,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	BOOL res = [[NSUserDefaults standardUserDefaults] synchronize];
-	NSLog(@" Synchronizing %@", res?@"worked!":@"failed :(");	
+    NSLog(@" Synchronizing %@", res?@"worked!":@"failed :(");	
 }
 
 
@@ -88,16 +87,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-	if (pickerView == myPickerView)	// don't show selection for the custom picker
-	{
-		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-		UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-		// report the selection to the UI label
-		cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",
-									 [pickerView selectedRowInComponent:0]];
-		NSString *side = indexPath.row == 2?@"lstimer":@"rstimer";
-		[[NSUserDefaults standardUserDefaults] setInteger:[pickerView selectedRowInComponent:0] forKey:side];
-	}
+
 }
 
 
@@ -107,12 +97,6 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
 	NSString *returnStr = @"";
-	
-	// note: custom picker doesn't care about titles, it uses custom views
-	if (pickerView == myPickerView)
-	{
-		returnStr = [[NSNumber numberWithInt:row] stringValue];
-	}
 	
 	return returnStr;
 }
@@ -156,22 +140,21 @@
 	UITableViewCell *targetCell = [tableView cellForRowAtIndexPath:indexPath];
 
 	switch (indexPath.row) {
-		case 1:
-			if (![self.datePicker isHidden]) [self.datePicker removeFromSuperview]; 
-			if (![self.myPickerView isHidden]) [self.myPickerView removeFromSuperview];
-			
-			NSLog(@"Clicked on Numeric Cell");
-            [targetCell setEditing:!targetCell.editing animated:NO];
-			
-			break;
-			
-		case 0:
+        case 0:
 			[self displayDatePicker:targetCell];
 			break;
+		case 1:
+        case 2:
+		case 3:{
+			if (![self.datePicker isHidden]) [self.datePicker removeFromSuperview];
+            
+            NumericCell *cell = (NumericCell *)targetCell;
 			
-		case 2:
-		case 3:
-			[self displayNumPicker:targetCell];
+			NSLog(@"Clicked on Numeric Cell");
+            cell.entryValue.hidden = NO;
+            cell.detail.hidden = YES;
+        }
+			
 			break;
 			
 		default:
@@ -202,22 +185,27 @@
             _numCell = [[NumericCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID];
            [self.NumericCellNib instantiateWithOwner:self options:nil];
         }
-        _numCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
             switch (indexPath.row) {
                 case 1:
                     _numCell.entryValue.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"feedingsDay"] stringValue];
+                    _numCell.settingKey = @"feedingsDay";
                     _numCell.detail.text = _numCell.entryValue.text;
                     break;
                 case 2:
                     _numCell.detail.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"lstimer"] stringValue];
+                    _numCell.entryValue.text = _numCell.detail.text;
+                    _numCell.settingKey = @"lstimer";
                     break;
                 case 3:
                     _numCell.detail.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"rstimer"] stringValue];
+                    _numCell.entryValue.text = _numCell.detail.text;
+                    _numCell.settingKey = @"rstimer";
                     break;
                 default:
                     break;
             }
+        
         _numCell.title.text = [self.dataArray objectAtIndex:indexPath.row];
         return _numCell;
     }
@@ -230,7 +218,6 @@
 {
 	// the date picker has finished sliding downwards, so remove it
 	[self.datePicker removeFromSuperview];
-	[self.myPickerView removeFromSuperview];
 }
 
 - (IBAction)dateAction:(id)sender
@@ -295,8 +282,7 @@
 -(void)displayDatePicker:(UITableViewCell *)targetCell  {
 	self.datePicker.date = [self.dateFormatter dateFromString:targetCell.detailTextLabel.text];
 	self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
-	// check if other picker is visible
-	if (![self.myPickerView isHidden]) [self.myPickerView removeFromSuperview]; 
+
 	// check if our date picker is already on screen
 	if (self.datePicker.superview == nil){
 		[self.view.superview insertSubview: self.datePicker belowSubview: self.tableView];
@@ -338,52 +324,7 @@
 	}
 }
 
--(void)displayNumPicker:(UITableViewCell *)targetCell  {
-	NSLog(@"showing picker view for fields 2 and 3");
-	[self.myPickerView selectRow: [targetCell.detailTextLabel.text intValue] inComponent:0 animated:NO];
-	// check if other picker is visible
-	if (![self.datePicker isHidden]) [self.datePicker removeFromSuperview]; 
-	// check if our picker is already on screen
-	if (self.myPickerView.superview == nil){
-		
-		[self.view.superview insertSubview: self.myPickerView belowSubview: self.tableView];
-		
-		// size up the picker view to our screen and compute the start/end frame origin for our slide up animation
-		//
-		// compute the start frame
-		CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
-		CGSize  pickerSize = [self.myPickerView sizeThatFits:CGSizeZero];
-		CGRect startRect = CGRectMake(0.0,
-									  screenRect.origin.y + screenRect.size.width,
-									  pickerSize.width/2, pickerSize.height-80);
-		self.myPickerView.frame = startRect;
-		
-		// compute the end frame
-		CGRect pickerRect = CGRectMake(0.0,
-									   screenRect.origin.y + screenRect.size.width - pickerSize.height+80,
-									   pickerSize.width/2,
-									   pickerSize.height-80);
-		// start the slide up animation
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.3];
-		
-		// we need to perform some post operations after the animation is complete
-		[UIView setAnimationDelegate:self];
-		
-		self.myPickerView.frame = pickerRect;
-		
-		// shrink the table vertical size to make room for the date picker
-		CGRect newFrame = self.tableView.frame;
-		if (newFrame.size.height >= screenRect.size.width - 32) { 
-			newFrame.size.height -= self.myPickerView.frame.size.height;
-			self.tableView.frame = newFrame;
-		}
-		[UIView commitAnimations];
-		
-		// add the "Done" button to the nav bar
-		self.navigationItem.rightBarButtonItem = self.doneButton;
-	}
-}
+
 
 #pragma mark UINib
 

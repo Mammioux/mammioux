@@ -121,6 +121,15 @@
 	 */
 }
 
+- (void) restoreSettings{
+    // load file with settings
+	started = NO;
+	lstimer = [[NSUserDefaults standardUserDefaults] integerForKey:@"lstimer"]*60;
+	rstimer = [[NSUserDefaults standardUserDefaults] integerForKey:@"rstimer"]*60;
+	leftActive = [[NSUserDefaults standardUserDefaults] boolForKey:@"leftsidelast"];
+	sessionsPerDay = [[NSUserDefaults standardUserDefaults] integerForKey:@"feedingsDay"];
+}
+
 -(void) toggleButton:(UIButton *) aButton 
 {
 	if( ((aButton == rb ) && leftActive) || ((aButton ==lb) && !leftActive))
@@ -374,6 +383,7 @@
 	[super viewWillAppear:animated];
 	// gain access to the delegate and send a message to switch to a particular view.
 	[self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self restoreSettings];
 	
 }
 

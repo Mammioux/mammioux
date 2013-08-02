@@ -13,9 +13,6 @@
 @property (nonatomic,retain) IBOutlet UILabel *title;
 @property (nonatomic,retain) IBOutlet UITextField *entryValue;
 @property (nonatomic, retain) IBOutlet UILabel *detail;
-
-+ (NSString *) identifier;
-+ (NSString *) nibName;
-
+@property (nonatomic, retain) NSString *settingKey;
 
 @end

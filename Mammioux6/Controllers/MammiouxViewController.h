@@ -36,6 +36,7 @@
 
 - (IBAction) selectB:(id)sender;
 - (void) saveSettings;
+- (void) restoreSettings;
 -(void) toggleButton:(UIButton *) aButton;
 -(void) alertMsg:(NSString *)msg;
 -(void) updtSecs:(NSUInteger) secs;

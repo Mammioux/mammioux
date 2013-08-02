@@ -14,9 +14,6 @@
 
 @implementation NumericCell
 
-+ (NSString *) identifier { return NSStringFromClass([self class]); }
-
-+ (NSString *) nibName { return NSStringFromClass([self class]); }
 
 //- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 //   if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -42,13 +39,6 @@
 
 }
 
--(void) awakeFromNib {
-    NSLog(@"Awake From Nib");
-    [super awakeFromNib];
-    _entryValue.textColor = [UIColor yellowColor];
-    _entryValue.backgroundColor = [UIColor redColor];
-
-}
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
@@ -56,7 +46,6 @@
         NSLog(@"Entering Edit mode for numeric cells");
         _entryValue.hidden = NO;                
         self.detail.hidden = YES;
-        [[NSUserDefaults standardUserDefaults] setInteger:[self.detailTextLabel.text intValue] forKey:@"feedingsDay"];        
     } else {
         NSLog(@"Leaving Editing mode");
     }
@@ -77,7 +66,7 @@
         NSLog(@"Save value entered");
 		
         self.detail.text = self.entryValue.text;
-		[[NSUserDefaults standardUserDefaults] setInteger:[self.detailTextLabel.text intValue] forKey:@"feedingsDay"];
+		[[NSUserDefaults standardUserDefaults] setInteger:[self.detail.text intValue] forKey:self.settingKey];
 	}
 	[textField resignFirstResponder];
     _entryValue.hidden = YES;

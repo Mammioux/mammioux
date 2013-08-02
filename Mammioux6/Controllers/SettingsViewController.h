@@ -55,7 +55,6 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIDatePicker *datePicker; 
-@property (nonatomic, retain) IBOutlet UIPickerView *myPickerView;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *resetButton;
 @property (nonatomic, retain) IBOutlet UIButton *urlButton;
@@ -70,5 +69,5 @@
 - (IBAction)dateAction:(id)sender;	// when the user has changed the date picke values 
 - (IBAction)resetAction:(id)sender;	// when the user wants to reset to default values
 -(void)displayDatePicker:(UITableViewCell *)targetCell;
--(void)displayNumPicker:(UITableViewCell *)targetCell;
+
 @end
