@@ -72,7 +72,6 @@
 	NSString *logLine = [NSString stringWithFormat:@"%@,%@",line,formattedDateString];
 	[self->currentLog addObject:logLine];
 	NSLog(@"Add Line: %@",logLine);
-    NSLog(@"Log has %d lines",self->currentLog.count);
 }
 
 
