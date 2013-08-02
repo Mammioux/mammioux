@@ -57,9 +57,6 @@
 		863C193A17A2F881005A6E84 /* timers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 863C193917A2F881005A6E84 /* timers.plist */; };
 		863C19D817A31C7A005A6E84 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D517A31C78005A6E84 /* icon@2x.png */; };
 		863C19D917A31C7A005A6E84 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D617A31C78005A6E84 /* icon.png */; };
-		863C19DA17A31C7A005A6E84 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D717A31C79005A6E84 /* icon2.png */; };
-		863C19DC17A31C98005A6E84 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19DB17A31C98005A6E84 /* icon.png */; };
-		863C19DE17A31CA4005A6E84 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19DD17A31CA3005A6E84 /* icon@2x.png */; };
 		864722C917A850B7005E9160 /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 864722C817A850B7005E9160 /* NumericCell.m */; };
 		8647231A17AAB7EE005E9160 /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8647231917AAB7EE005E9160 /* SettingsView.m */; };
 		86EF995617AC1081005B5BB3 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EF995517AC1081005B5BB3 /* LogViewController.m */; };
@@ -396,9 +393,6 @@
 				863C193A17A2F881005A6E84 /* timers.plist in Resources */,
 				863C19D817A31C7A005A6E84 /* icon@2x.png in Resources */,
 				863C19D917A31C7A005A6E84 /* icon.png in Resources */,
-				863C19DA17A31C7A005A6E84 /* icon2.png in Resources */,
-				863C19DC17A31C98005A6E84 /* icon.png in Resources */,
-				863C19DE17A31CA4005A6E84 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "LogViewController.h"
+#import "mammiouxLog.h"
 
 @interface LogViewController ()
 
@@ -44,24 +45,28 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return [[mammiouxLog sharedMammiouxLog] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"LogCellId";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSString *logLine = [[mammiouxLog sharedMammiouxLog] objectAtIndex:indexPath.row];
+    NSArray *listItems = [logLine componentsSeparatedByString:@","];
+    cell.textLabel.text = [listItems objectAtIndex:0];
+    cell.detailTextLabel.text = [listItems objectAtIndex:1];
     
     return cell;
 }
@@ -118,4 +123,13 @@
      */
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
+
+- (IBAction)cleanLog:(id)sender {
+    [[mammiouxLog sharedMammiouxLog] clean];
+    [self.tableView reloadData];
+}
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LogViewController : UITableViewController
+- (IBAction)cleanLog:(id)sender;
 
 @end

@@ -10,15 +10,16 @@
 
 
 @interface mammiouxLog : NSObject {
-	NSString *pathToLog;
-	NSMutableArray *currentLog;
-	NSDate *currentTime;
-
+    NSMutableArray *currentLog;
 }
-@property(nonatomic, retain) NSString *pathToLog;
-@property(nonatomic, retain) NSMutableArray *currentLog;
+
+
++(mammiouxLog *)sharedMammiouxLog;
 
 - (void)addToLog:(NSString *) line; 
 - (NSDate *)getLastTime;
+- (NSString *)objectAtIndex:(NSUInteger)index;
 - (BOOL)flush;
+- (BOOL)clean;
+- (int)count;
 @end

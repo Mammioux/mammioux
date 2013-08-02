@@ -10,27 +10,36 @@
 
 
 @implementation mammiouxLog
-@synthesize pathToLog;
-@synthesize currentLog;
+
+
+
++ (mammiouxLog *)sharedMammiouxLog {
+    static mammiouxLog  *sharedMammiouxLog = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMammiouxLog = [[self alloc] init];
+    });
+    return sharedMammiouxLog;
+}
 
 - (id)init
 
 {
     if ((self = [super init])) {
 		//create array to keep log
-		currentLog = [[NSMutableArray alloc] init];
+		self->currentLog = [[NSMutableArray alloc] init];
 		
         /* Check if log file already exists */
 		// set logfile and write Start Feeding session entry
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 		NSString *documentsDirectory = [paths objectAtIndex:0];
-		pathToLog = [documentsDirectory stringByAppendingPathComponent:@"knuzzle.log"];	
+		NSString *pathToLog = [documentsDirectory stringByAppendingPathComponent:@"mammioux.log"];
 		if ([fileManager fileExistsAtPath:pathToLog] == NO) {
 			[fileManager createFileAtPath:pathToLog	contents:nil attributes:nil];
 		} else {
 			//move current log to array, for browsing
-			[currentLog addObjectsFromArray:[NSArray arrayWithContentsOfFile:pathToLog]];
+			[self->currentLog addObjectsFromArray:[NSArray arrayWithContentsOfFile:pathToLog]];
 		}
     }
 	
@@ -48,9 +57,9 @@
 	   return NO;
 	}
 	
-    pathToLog = [documentsDirectory stringByAppendingPathComponent:@"knuzzle.log"];	
+    NSString *pathToLog = [documentsDirectory stringByAppendingPathComponent:@"mammioux.log"];
 	
-	return ([currentLog writeToFile:pathToLog atomically:YES]);
+	return ([self->currentLog writeToFile:pathToLog atomically:YES]);
 	
 }
 -(void) addToLog:(NSString *) line
@@ -61,20 +70,23 @@
 	NSDate *now = [NSDate date];
 	NSString *formattedDateString = [dateFormatter stringFromDate:now];
 	NSString *logLine = [NSString stringWithFormat:@"%@,%@",line,formattedDateString];
-	[currentLog addObject:logLine];
+	[self->currentLog addObject:logLine];
 	NSLog(@"Add Line: %@",logLine);
+    NSLog(@"Log has %d lines",self->currentLog.count);
 }
+
+
 - (NSDate *)getLastTime 
 {
 	NSDate *formatterDate;
 	
 
-	if ([currentLog count] >0 )
+	if ([self->currentLog count] >0 )
 	{
 		NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
 		[inputFormatter setDateFormat:@"yyyyMMdd-HH:mm:ss"];
 
-		NSString *lastLine = [currentLog objectAtIndex:[currentLog count]-1];	
+		NSString *lastLine = [self->currentLog objectAtIndex:[self->currentLog count]-1];	
 		NSArray *listItems = [lastLine componentsSeparatedByString:@","];
 		formatterDate = [inputFormatter dateFromString:[listItems objectAtIndex: 1]];
 	}
@@ -85,14 +97,39 @@
 	return formatterDate;
 }
 
--(NSString *) placeHolder 
-{	
-	currentTime = [NSDate date];
-	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"HH:mm:ss"];
-	NSString *formattedDateString = [dateFormatter stringFromDate:currentTime];
-//	NSLog(@"formattedDateString: %@", formattedDateString);
-//	NSLog(@"Testing %@",currentTime.description);
-	return formattedDateString;
+-(BOOL)clean {
+    [self->currentLog removeAllObjects];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	
+    if (!documentsDirectory) {
+        NSLog(@"Documents directory not found!");
+        return NO;
+	}
+	
+    NSString *pathToLog = [documentsDirectory stringByAppendingPathComponent:@"mammioux.log"];
+    
+    if ([fileManager fileExistsAtPath:pathToLog] == YES) {
+        NSError *error = NULL;
+        if ([fileManager removeItemAtPath:pathToLog  error:&error]){
+            return YES;
+        }
+        else
+        {
+            NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
+            return NO;
+        }
+    } 
+    return NO;
 }
+
+- (int)count{
+    return self->currentLog.count;
+}
+
+- (NSString *)objectAtIndex:(NSUInteger) index{
+    return [currentLog objectAtIndex:index];
+}
+
 @end

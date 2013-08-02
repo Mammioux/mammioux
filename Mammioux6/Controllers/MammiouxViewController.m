@@ -68,7 +68,7 @@
 	lpv.progress = 0;
 	rpv.progress = 0;
 	
-	klog = [[mammiouxLog alloc] init];
+	klog = [mammiouxLog sharedMammiouxLog] ;
 	NSDate *lastSession = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastSession"];
 	
 	NSLog(@"Last Session: %@",lastSession.description);
