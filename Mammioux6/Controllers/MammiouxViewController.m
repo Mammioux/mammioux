@@ -306,7 +306,7 @@
 		else {
 			//NSLog(@"Start Right Side");
 			[self startTimer:rtc];
-			[klog addToLog:@"SL"];
+			[klog addToLog:@"SR"];
 			[rightAIV startAnimating];
 		}
 	}

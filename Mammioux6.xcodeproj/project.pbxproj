@@ -62,6 +62,7 @@
 		863C19DE17A31CA4005A6E84 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19DD17A31CA3005A6E84 /* icon@2x.png */; };
 		864722C917A850B7005E9160 /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 864722C817A850B7005E9160 /* NumericCell.m */; };
 		8647231A17AAB7EE005E9160 /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8647231917AAB7EE005E9160 /* SettingsView.m */; };
+		86EF995617AC1081005B5BB3 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EF995517AC1081005B5BB3 /* LogViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		864722C817A850B7005E9160 /* NumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumericCell.m; path = Mammioux6/Resources/NumericCell.m; sourceTree = SOURCE_ROOT; };
 		8647231817AAB7EE005E9160 /* SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsView.h; sourceTree = "<group>"; };
 		8647231917AAB7EE005E9160 /* SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsView.m; sourceTree = "<group>"; };
+		86EF995417AC1081005B5BB3 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
+		86EF995517AC1081005B5BB3 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +250,8 @@
 				863C18F417A2F7AC005A6E84 /* mammiouxLog.m */,
 				863C18F517A2F7AC005A6E84 /* InfoViewController.h */,
 				863C18F617A2F7AC005A6E84 /* InfoViewController.m */,
+				86EF995417AC1081005B5BB3 /* LogViewController.h */,
+				86EF995517AC1081005B5BB3 /* LogViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				863C190217A2F7AC005A6E84 /* InfoViewController.m in Sources */,
 				864722C917A850B7005E9160 /* NumericCell.m in Sources */,
 				8647231A17AAB7EE005E9160 /* SettingsView.m in Sources */,
+				86EF995617AC1081005B5BB3 /* LogViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

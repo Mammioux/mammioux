@@ -21,7 +21,7 @@
 
 @implementation SettingsViewController
 
-@synthesize datePicker, doneButton, dataArray, dateFormatter,urlButton, resetButton;
+@synthesize doneButton, dataArray, dateFormatter,urlButton, resetButton;
 
 
 - (void)viewDidLoad
@@ -33,13 +33,12 @@
 	[self.dateFormatter setTimeStyle:NSDateFormatterShortStyle];
 	
 	
-	CGRect frame = CGRectMake(kLeftMargin, 0, kTextFieldWidth, kTextFieldHeight);
-	frame = CGRectMake(0,0, 40, 40);
+	CGRect frame = CGRectMake(0,0, 40, 40);
 	
 	self.urlButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	self.urlButton.frame=frame;
 	
-	[self.urlButton setTitle:@"Knuzzle (c)" forState:UIControlStateNormal];	
+	[self.urlButton setTitle:@"Mammioux (c)" forState:UIControlStateNormal];
 	self.urlButton.titleLabel.font = [UIFont boldSystemFontOfSize:[UIFont buttonFontSize]];
 	
 	// Center the text on the button, considering the button's shadow
@@ -140,21 +139,13 @@
 	UITableViewCell *targetCell = [tableView cellForRowAtIndexPath:indexPath];
 
 	switch (indexPath.row) {
-        case 0:
-			[self displayDatePicker:targetCell];
-			break;
 		case 1:
         case 2:
 		case 3:{
-			if (![self.datePicker isHidden]) [self.datePicker removeFromSuperview];
-            
             NumericCell *cell = (NumericCell *)targetCell;
-			
-			NSLog(@"Clicked on Numeric Cell");
             cell.entryValue.hidden = NO;
             cell.detail.hidden = YES;
-        }
-			
+        }			
 			break;
 			
 		default:
@@ -165,7 +156,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSString *kCustomCellID = indexPath.row == 0? @"DateCellID":@"NumericCellId";
+	NSString *kCustomCellID;
     //NumericCell *numCell;
     UITableViewCell *cell;
 
@@ -183,7 +174,6 @@
         _numCell = (NumericCell *)[tableView dequeueReusableCellWithIdentifier:kCustomCellID];
         if (_numCell == nil) {
             _numCell = [[NumericCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCustomCellID];
-           [self.NumericCellNib instantiateWithOwner:self options:nil];
         }
 
             switch (indexPath.row) {
@@ -214,60 +204,7 @@
 }
 
 #pragma Actions
-- (void)slideDownDidStop
-{
-	// the date picker has finished sliding downwards, so remove it
-	[self.datePicker removeFromSuperview];
-}
 
-- (IBAction)dateAction:(id)sender
-{
-	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-	switch (indexPath.row) {
-		case 0:
-			cell.detailTextLabel.text = [self.dateFormatter stringFromDate:self.datePicker.date];
-			[[NSUserDefaults standardUserDefaults] setObject:self.datePicker.date forKey:@"lastSession"];
-			break;
-		case 1:
-			break;
-		case 2:
-		case 3:
-			break;
-		default:
-			break;
-	}
-}
-
-- (IBAction)doneAction:(id)sender
-{
-	CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
-	CGRect endFrame = self.datePicker.frame;
-	endFrame.origin.y = screenRect.origin.y + screenRect.size.height;
-	
-	// start the slide down animation
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:0.3];
-	
-	// we need to perform some post operations after the animation is complete
-	[UIView setAnimationDelegate:self];
-	[UIView setAnimationDidStopSelector:@selector(slideDownDidStop)];
-	
-	self.datePicker.frame = endFrame;
-	[UIView commitAnimations];
-	
-	// grow the table back again in vertical size to make room for the date picker
-	CGRect newFrame = self.tableView.frame;
-	newFrame.size.height += self.datePicker.frame.size.height;
-	self.tableView.frame = newFrame;
-	
-	//  to=do replace the "Done" button in the nav bar by resetButton
-	self.navigationItem.rightBarButtonItem = nil;
-	
-	// deselect the current table row
-	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
 
 - (IBAction)resetAction:(id)sender
 {
@@ -279,63 +216,6 @@
     [self.navigationController.viewControllers[0] performSegueWithIdentifier:@"InfoSegue" sender:self];
 }
 
--(void)displayDatePicker:(UITableViewCell *)targetCell  {
-	self.datePicker.date = [self.dateFormatter dateFromString:targetCell.detailTextLabel.text];
-	self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
 
-	// check if our date picker is already on screen
-	if (self.datePicker.superview == nil){
-		[self.view.superview insertSubview: self.datePicker belowSubview: self.tableView];
-		NSLog(@"Showing Date Picker");
-		// size up the picker view to our screen and compute the start/end frame origin for our slide up animation
-		//
-		// compute the start frame
-		CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
-		CGSize pickerSize = [self.datePicker sizeThatFits:CGSizeZero];
-		CGRect startRect = CGRectMake(0.0,
-									  screenRect.origin.y + screenRect.size.width,
-									  pickerSize.width, pickerSize.height);
-		self.datePicker.frame = startRect;
-		
-		// compute the end frame
-		CGRect pickerRect = CGRectMake(0.0,
-									   screenRect.origin.y + screenRect.size.width - pickerSize.height,
-									   pickerSize.width,
-									   pickerSize.height);
-		// start the slide up animation
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.3];
-		
-		// we need to perform some post operations after the animation is complete
-		[UIView setAnimationDelegate:self];
-		
-		self.datePicker.frame = pickerRect;
-		
-		// shrink the table vertical size to make room for the date picker
-		CGRect newFrame = self.tableView.frame;
-		if (newFrame.size.height >= screenRect.size.width - 32) { 
-			newFrame.size.height -= self.datePicker.frame.size.height;
-			self.tableView.frame = newFrame;
-		}
-		[UIView commitAnimations];
-		
-		// add the "Done" button to the nav bar
-		self.navigationItem.rightBarButtonItem = self.doneButton;
-	}
-}
-
-
-
-#pragma mark UINib
-
-- (UINib *)NumericCellNib
-{
-    NSLog(@"Loading Numeric Cell Nib only once");
-    if (!_NumericCellNib)
-    {
-        _NumericCellNib = [UINib nibWithNibName:@"NumericCellId" bundle:nil];
-    }
-    return _NumericCellNib;
-}
 @end
 

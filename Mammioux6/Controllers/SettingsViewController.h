@@ -54,7 +54,6 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet UIDatePicker *datePicker; 
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *resetButton;
 @property (nonatomic, retain) IBOutlet UIButton *urlButton;
@@ -62,12 +61,7 @@
 @property (nonatomic, retain) NSArray *dataArray; 
 @property (nonatomic, retain) NSDateFormatter *dateFormatter; 
 @property (strong, nonatomic) IBOutlet NumericCell *numCell;
-@property (strong, nonatomic) UINib *NumericCellNib;
 
-
-- (IBAction)doneAction:(id)sender;	// when the done button is clicked
-- (IBAction)dateAction:(id)sender;	// when the user has changed the date picke values 
 - (IBAction)resetAction:(id)sender;	// when the user wants to reset to default values
--(void)displayDatePicker:(UITableViewCell *)targetCell;
 
 @end

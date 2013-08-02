@@ -30,7 +30,7 @@
 //}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    NSLog(@"Initializing cell with Coder");
+
     if (self = [super initWithCoder:aDecoder]) {
         // custom code here
     }
@@ -43,11 +43,8 @@
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
     if (editing) {
-        NSLog(@"Entering Edit mode for numeric cells");
         _entryValue.hidden = NO;                
         self.detail.hidden = YES;
-    } else {
-        NSLog(@"Leaving Editing mode");
     }
 }
 
@@ -62,8 +59,6 @@
 {
 	if (textField == _entryValue){
 		// the user pressed the "Done" button, so dismiss the keyboard
-        
-        NSLog(@"Save value entered");
 		
         self.detail.text = self.entryValue.text;
 		[[NSUserDefaults standardUserDefaults] setInteger:[self.detail.text intValue] forKey:self.settingKey];
