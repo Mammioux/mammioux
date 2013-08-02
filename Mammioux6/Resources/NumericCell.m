@@ -36,7 +36,6 @@
     NSLog(@"Initializing cell with Coder");
     if (self = [super initWithCoder:aDecoder]) {
         // custom code here
-        self.entryValue = [[UITextField alloc] init];
     }
     
     return self;
@@ -45,13 +44,10 @@
 
 -(void) awakeFromNib {
     NSLog(@"Awake From Nib");
-    self.entryValue.text = self.detailTextLabel.text;
-    self.detail.text = self.detailTextLabel.text;
+    [super awakeFromNib];
     _entryValue.textColor = [UIColor yellowColor];
     _entryValue.backgroundColor = [UIColor redColor];
 
-
-    [super awakeFromNib];
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
@@ -63,7 +59,6 @@
         [[NSUserDefaults standardUserDefaults] setInteger:[self.detailTextLabel.text intValue] forKey:@"feedingsDay"];        
     } else {
         NSLog(@"Leaving Editing mode");
-        _entryValue.hidden = YES;
     }
 }
 
@@ -81,14 +76,13 @@
         
         NSLog(@"Save value entered");
 		
-		self.detailTextLabel.text = self.entryValue.text;
         self.detail.text = self.entryValue.text;
 		[[NSUserDefaults standardUserDefaults] setInteger:[self.detailTextLabel.text intValue] forKey:@"feedingsDay"];
 	}
 	[textField resignFirstResponder];
-    [self setEditing:NO animated:YES];
-    [self setHighlighted:NO];
-	return YES;	
+    _entryValue.hidden = YES;
+    self.detail.hidden = NO;
+	return YES;
 }
 
 @end

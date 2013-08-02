@@ -205,23 +205,20 @@
         _numCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
             switch (indexPath.row) {
-                case 1:{
+                case 1:
                     _numCell.entryValue.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"feedingsDay"] stringValue];
                     _numCell.detail.text = _numCell.entryValue.text;
-                    _numCell.title.text = [self.dataArray objectAtIndex:indexPath.row];
-                    _numCell.detailTextLabel.text = _numCell.entryValue.text;
-                }
                     break;
                 case 2:
-                    _numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"lstimer"] stringValue];
+                    _numCell.detail.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"lstimer"] stringValue];
                     break;
                 case 3:
-                    _numCell.detailTextLabel.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"rstimer"] stringValue];
+                    _numCell.detail.text = [[[NSUserDefaults standardUserDefaults] objectForKey:@"rstimer"] stringValue];
                     break;
                 default:
                     break;
             }
-        _numCell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+        _numCell.title.text = [self.dataArray objectAtIndex:indexPath.row];
         return _numCell;
     }
 	

@@ -231,29 +231,55 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="NumericCellId" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NumericCellId" editingAccessoryType="disclosureIndicator" textLabel="l7s-Ay-ubi" detailTextLabel="Ega-P4-1gp" style="IBUITableViewCellStyleValue1" id="U66-EA-QbD" customClass="NumericCell">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="NumericCellId" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NumericCellId" editingAccessoryType="disclosureIndicator" id="U66-EA-QbD" customClass="NumericCell">
                                 <rect key="frame" x="0.0" y="46" width="480" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="1" width="440" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7s-Ay-ubi">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Other" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq4-n0-Rzv">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="236" id="WzQ-tu-L6z"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ega-P4-1gp">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4a-ym-gDd">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="53" id="ScL-D9-HLc"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
+                                        <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="L6a-l4-VKq">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="9d3-DQ-8k0"/>
+                                                <constraint firstAttribute="width" constant="97" id="OTp-d3-fgP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="U66-EA-QbD" id="jEx-Nk-dzQ"/>
+                                            </connections>
+                                        </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="L6a-l4-VKq" firstAttribute="top" secondItem="U66-EA-QbD" secondAttribute="top" constant="8" id="7qo-3p-ojF"/>
+                                    <constraint firstAttribute="trailing" secondItem="w4a-ym-gDd" secondAttribute="trailing" constant="30" id="95j-GE-fgY"/>
+                                    <constraint firstItem="L6a-l4-VKq" firstAttribute="trailing" secondItem="w4a-ym-gDd" secondAttribute="trailing" type="default" id="PF2-YH-BkZ"/>
+                                    <constraint firstItem="Cq4-n0-Rzv" firstAttribute="leading" secondItem="U66-EA-QbD" secondAttribute="leading" constant="30" id="oxV-mk-AKG"/>
+                                    <constraint firstItem="w4a-ym-gDd" firstAttribute="baseline" secondItem="Cq4-n0-Rzv" secondAttribute="baseline" type="default" id="oyE-EY-k7i"/>
+                                    <constraint firstItem="w4a-ym-gDd" firstAttribute="centerY" secondItem="U66-EA-QbD" secondAttribute="centerY" type="default" id="qpR-Ea-OzC"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="detail" destination="Ega-P4-1gp" id="A9t-nm-T6D"/>
-                                    <outlet property="title" destination="l7s-Ay-ubi" id="nJt-IB-uaQ"/>
+                                    <outlet property="detail" destination="w4a-ym-gDd" id="rHb-aG-Guq"/>
+                                    <outlet property="entryValue" destination="L6a-l4-VKq" id="6zC-Qm-qKd"/>
+                                    <outlet property="title" destination="Cq4-n0-Rzv" id="b5V-sV-Wq4"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DateCellId" editingAccessoryType="disclosureIndicator" textLabel="Ggh-N5-XF2" detailTextLabel="fkb-RB-ad4" imageView="qcC-Aa-3NJ" style="IBUITableViewCellStyleValue1" id="TgD-Ja-WYE">
