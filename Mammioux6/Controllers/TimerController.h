@@ -27,8 +27,6 @@
 - (IBAction)startTargetTimer:sender;
 - (IBAction)stopTargetTimer:sender;
 
-- (IBAction)startFireDateTimer:sender;
-
 - (void)secondsFireMethod:(NSTimer*)theTimer;
 
 - (void)invocationMethod:(NSDate *)date;

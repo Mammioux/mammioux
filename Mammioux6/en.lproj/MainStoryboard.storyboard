@@ -22,7 +22,7 @@
                         <subviews>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-TD-kXd">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="LMn-l9-9an"/>
+                                    <constraint firstAttribute="width" constant="240" id="Acn-mh-MmI"/>
                                     <constraint firstAttribute="height" constant="240" type="user" id="lwQ-Qf-OnO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -99,7 +99,7 @@
                             <activityIndicatorView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WOl-7c-ill"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Last time: 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-gd-z95">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="370" id="v5v-wE-Ea4"/>
+                                    <constraint firstAttribute="width" constant="249" id="LDv-qT-RAr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -118,6 +118,24 @@
                                     <segue destination="9lh-je-Epk" kind="push" identifier="InfoSegue" id="Ohd-Co-Fu9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLk-hH-bAV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="gql-0d-vl6"/>
+                                    <constraint firstAttribute="height" constant="44" id="oPV-94-5af"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Button" image="iPhone_settings_icon_by_triumvirateebp.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSettings" destination="2" eventType="touchUpInside" id="ycv-FC-9XY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -127,21 +145,23 @@
                             <constraint firstItem="8fZ-Kr-LHP" firstAttribute="top" secondItem="1kR-KN-vMv" secondAttribute="top" type="default" id="9h6-96-WAc"/>
                             <constraint firstItem="LrT-BF-wqP" firstAttribute="baseline" secondItem="Gwd-TD-kXd" secondAttribute="baseline" type="user" id="CWI-5T-eTY"/>
                             <constraint firstAttribute="bottom" secondItem="99k-KX-Yco" secondAttribute="bottom" constant="68" id="EE7-dx-2Zu"/>
+                            <constraint firstItem="dLk-hH-bAV" firstAttribute="centerY" secondItem="j7R-on-gRV" secondAttribute="centerY" type="default" id="KM9-hg-3zY"/>
                             <constraint firstItem="1kR-KN-vMv" firstAttribute="top" secondItem="Rlk-pe-YBS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PEg-CF-LQB"/>
-                            <constraint firstItem="C1Y-gd-z95" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="93" id="PSB-ns-9nm"/>
                             <constraint firstAttribute="bottom" secondItem="8fZ-Kr-LHP" secondAttribute="bottom" constant="50" id="QQH-fy-vOT"/>
                             <constraint firstItem="99k-KX-Yco" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="50" id="SsD-lL-hCe"/>
                             <constraint firstAttribute="trailing" secondItem="Rlk-pe-YBS" secondAttribute="trailing" constant="51" id="Un0-xv-7WV"/>
+                            <constraint firstAttribute="bottom" secondItem="C1Y-gd-z95" secondAttribute="bottom" constant="10" id="Vai-5S-n83"/>
                             <constraint firstAttribute="trailing" secondItem="j7R-on-gRV" secondAttribute="trailing" constant="36" id="aGR-q3-EJp"/>
                             <constraint firstAttribute="trailing" secondItem="1kR-KN-vMv" secondAttribute="trailing" constant="9" id="bu3-dZ-UJZ"/>
                             <constraint firstItem="Gwd-TD-kXd" firstAttribute="centerX" secondItem="WOl-7c-ill" secondAttribute="centerX" type="default" id="csY-nW-Zks"/>
                             <constraint firstItem="Gwd-TD-kXd" firstAttribute="trailing" secondItem="zv4-zw-VDJ" secondAttribute="trailing" type="default" id="eBv-tj-i78"/>
-                            <constraint firstAttribute="bottom" secondItem="C1Y-gd-z95" secondAttribute="bottom" constant="8" id="ehZ-ia-iEz"/>
-                            <constraint firstAttribute="bottom" secondItem="j7R-on-gRV" secondAttribute="bottom" constant="15" id="flZ-qX-0Uh"/>
                             <constraint firstItem="Etm-Dz-1RK" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" constant="107" id="hZz-Qo-NWK"/>
                             <constraint firstItem="WOl-7c-ill" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" constant="108" id="izt-pa-0tf"/>
+                            <constraint firstItem="C1Y-gd-z95" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="112" id="m9L-Mz-IOE"/>
                             <constraint firstItem="Gwd-TD-kXd" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="user" id="mqW-cn-xXb"/>
+                            <constraint firstItem="dLk-hH-bAV" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="18" id="n9i-jW-b0z"/>
                             <constraint firstItem="LrT-BF-wqP" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" type="default" id="qv2-Nx-hAf"/>
+                            <constraint firstAttribute="bottom" secondItem="dLk-hH-bAV" secondAttribute="bottom" constant="2" id="r5W-Bx-vfp"/>
                         </constraints>
                         <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -299,7 +319,7 @@
                                             <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Clock.jpg" id="qcC-Aa-3NJ">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="history.png" id="qcC-Aa-3NJ">
                                             <rect key="frame" x="6" y="6" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -385,10 +405,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Clock.jpg" width="30" height="30"/>
         <image name="Left_Hand.png" width="120" height="120"/>
         <image name="RIght_Hand.png" width="120" height="120"/>
         <image name="button_dark.png" width="16" height="16"/>
+        <image name="history.png" width="30" height="30"/>
+        <image name="iPhone_settings_icon_by_triumvirateebp.png" width="59" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

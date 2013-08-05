@@ -27,7 +27,7 @@
 
 - (void)invocationMethod:(NSDate *)date {
    // NSLog(@"Invocation for timer started on %@", date);
-	//[kvc alertMsg:@"Reached Target"];
+	[kvc alertMsg:@"Change Side"];
 }
 
 - (IBAction)startOneOffTimer:sender {
@@ -48,13 +48,14 @@
 }
 - (IBAction)createTargetTimer:sender withTargetTime:(NSTimeInterval) seconds{
 	self.kvc = sender;
+    
     NSMethodSignature *methodSignature = [self methodSignatureForSelector:@selector(invocationMethod:)];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
     [invocation setTarget:self];
     [invocation setSelector:@selector(invocationMethod:)];
     NSDate *startDate = [NSDate date];
     [invocation setArgument:&startDate atIndex:2];
-    NSTimer *timer = [NSTimer timerWithTimeInterval:seconds invocation:invocation repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:seconds-self.timerCount invocation:invocation repeats:YES];
     self.targetTimer = timer;
 	timerCount = 0;
 }
@@ -66,18 +67,6 @@
     }
 }
 
-- (IBAction)startFireDateTimer:sender {
-    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:1.0];
-    NSTimer *timer = [[NSTimer alloc] initWithFireDate:fireDate
-											  interval:0.5
-												target:self
-											  selector:@selector(targetFireMethod:)
-											  userInfo:[self userInfo]
-											   repeats:YES];
-    timerCount = 1;
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    [runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
-}
 - (IBAction)stopSecondsTimer:sender {
     [_secondsTimer invalidate];
     self.secondsTimer = nil;

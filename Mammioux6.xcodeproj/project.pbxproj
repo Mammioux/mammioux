@@ -32,26 +32,18 @@
 		863C190117A2F7AC005A6E84 /* mammiouxLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F417A2F7AC005A6E84 /* mammiouxLog.m */; };
 		863C190217A2F7AC005A6E84 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F617A2F7AC005A6E84 /* InfoViewController.m */; };
 		863C190317A2F7AC005A6E84 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F617A2F7AC005A6E84 /* InfoViewController.m */; };
-		863C190817A2F7E6005A6E84 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 863C190717A2F7E6005A6E84 /* SettingsViewController.xib */; };
-		863C190917A2F7E6005A6E84 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 863C190717A2F7E6005A6E84 /* SettingsViewController.xib */; };
 		863C191C17A2F849005A6E84 /* BlackBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190E17A2F849005A6E84 /* BlackBG.png */; };
 		863C191D17A2F849005A6E84 /* BlackBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190E17A2F849005A6E84 /* BlackBG.png */; };
 		863C191E17A2F849005A6E84 /* Left_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190F17A2F849005A6E84 /* Left_Hand.png */; };
 		863C191F17A2F849005A6E84 /* Left_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190F17A2F849005A6E84 /* Left_Hand.png */; };
 		863C192017A2F849005A6E84 /* RIght_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191017A2F849005A6E84 /* RIght_Hand.png */; };
 		863C192117A2F849005A6E84 /* RIght_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191017A2F849005A6E84 /* RIght_Hand.png */; };
-		863C192217A2F849005A6E84 /* icon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 863C191117A2F849005A6E84 /* icon2.jpg */; };
-		863C192317A2F849005A6E84 /* icon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 863C191117A2F849005A6E84 /* icon2.jpg */; };
 		863C192817A2F849005A6E84 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191417A2F849005A6E84 /* process.png */; };
 		863C192917A2F849005A6E84 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191417A2F849005A6E84 /* process.png */; };
 		863C192A17A2F849005A6E84 /* icon06.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191517A2F849005A6E84 /* icon06.png */; };
 		863C192B17A2F849005A6E84 /* icon06.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191517A2F849005A6E84 /* icon06.png */; };
 		863C192C17A2F849005A6E84 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191617A2F849005A6E84 /* history.png */; };
 		863C192D17A2F849005A6E84 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191617A2F849005A6E84 /* history.png */; };
-		863C193217A2F849005A6E84 /* Clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 863C191917A2F849005A6E84 /* Clock.jpg */; };
-		863C193317A2F849005A6E84 /* Clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 863C191917A2F849005A6E84 /* Clock.jpg */; };
-		863C193417A2F849005A6E84 /* Settings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 863C191A17A2F849005A6E84 /* Settings.jpg */; };
-		863C193517A2F849005A6E84 /* Settings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 863C191A17A2F849005A6E84 /* Settings.jpg */; };
 		863C193617A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */; };
 		863C193717A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */; };
 		863C193A17A2F881005A6E84 /* timers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 863C193917A2F881005A6E84 /* timers.plist */; };
@@ -103,24 +95,18 @@
 		863C18F417A2F7AC005A6E84 /* mammiouxLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mammiouxLog.m; sourceTree = "<group>"; };
 		863C18F517A2F7AC005A6E84 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		863C18F617A2F7AC005A6E84 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
-		863C190717A2F7E6005A6E84 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		863C190E17A2F849005A6E84 /* BlackBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBG.png; sourceTree = "<group>"; };
 		863C190F17A2F849005A6E84 /* Left_Hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Left_Hand.png; sourceTree = "<group>"; };
 		863C191017A2F849005A6E84 /* RIght_Hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RIght_Hand.png; sourceTree = "<group>"; };
-		863C191117A2F849005A6E84 /* icon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon2.jpg; sourceTree = "<group>"; };
 		863C191417A2F849005A6E84 /* process.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = process.png; sourceTree = "<group>"; };
 		863C191517A2F849005A6E84 /* icon06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon06.png; sourceTree = "<group>"; };
 		863C191617A2F849005A6E84 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
-		863C191917A2F849005A6E84 /* Clock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clock.jpg; sourceTree = "<group>"; };
-		863C191A17A2F849005A6E84 /* Settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Settings.jpg; sourceTree = "<group>"; };
 		863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_settings_icon_by_triumvirateebp.png; sourceTree = "<group>"; };
 		863C193817A2F86C005A6E84 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		863C193917A2F881005A6E84 /* timers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = timers.plist; sourceTree = "<group>"; };
 		863C19D517A31C78005A6E84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		863C19D617A31C78005A6E84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		863C19D717A31C79005A6E84 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
-		863C19DB17A31C98005A6E84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		863C19DD17A31CA3005A6E84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		864722C717A850B7005E9160 /* NumericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumericCell.h; path = Mammioux6/Resources/NumericCell.h; sourceTree = SOURCE_ROOT; };
 		864722C817A850B7005E9160 /* NumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumericCell.m; path = Mammioux6/Resources/NumericCell.m; sourceTree = SOURCE_ROOT; };
 		8647231817AAB7EE005E9160 /* SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsView.h; sourceTree = "<group>"; };
@@ -156,8 +142,6 @@
 		863C18A317A2F725005A6E84 = {
 			isa = PBXGroup;
 			children = (
-				863C19DD17A31CA3005A6E84 /* icon@2x.png */,
-				863C19DB17A31C98005A6E84 /* icon.png */,
 				863C18B517A2F725005A6E84 /* Mammioux6 */,
 				863C18D917A2F726005A6E84 /* Mammioux6Tests */,
 				863C18AE17A2F725005A6E84 /* Frameworks */,
@@ -258,7 +242,6 @@
 			children = (
 				864722C517A84FFF005E9160 /* tableViewCells */,
 				863C190D17A2F82A005A6E84 /* Images */,
-				863C190717A2F7E6005A6E84 /* SettingsViewController.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -272,12 +255,9 @@
 				863C190E17A2F849005A6E84 /* BlackBG.png */,
 				863C190F17A2F849005A6E84 /* Left_Hand.png */,
 				863C191017A2F849005A6E84 /* RIght_Hand.png */,
-				863C191117A2F849005A6E84 /* icon2.jpg */,
 				863C191417A2F849005A6E84 /* process.png */,
 				863C191517A2F849005A6E84 /* icon06.png */,
 				863C191617A2F849005A6E84 /* history.png */,
-				863C191917A2F849005A6E84 /* Clock.jpg */,
-				863C191A17A2F849005A6E84 /* Settings.jpg */,
 				863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */,
 			);
 			path = Images;
@@ -379,16 +359,12 @@
 				863C18C417A2F725005A6E84 /* Default@2x.png in Resources */,
 				863C18C617A2F725005A6E84 /* Default-568h@2x.png in Resources */,
 				863C18C917A2F725005A6E84 /* MainStoryboard.storyboard in Resources */,
-				863C190817A2F7E6005A6E84 /* SettingsViewController.xib in Resources */,
 				863C191C17A2F849005A6E84 /* BlackBG.png in Resources */,
 				863C191E17A2F849005A6E84 /* Left_Hand.png in Resources */,
 				863C192017A2F849005A6E84 /* RIght_Hand.png in Resources */,
-				863C192217A2F849005A6E84 /* icon2.jpg in Resources */,
 				863C192817A2F849005A6E84 /* process.png in Resources */,
 				863C192A17A2F849005A6E84 /* icon06.png in Resources */,
 				863C192C17A2F849005A6E84 /* history.png in Resources */,
-				863C193217A2F849005A6E84 /* Clock.jpg in Resources */,
-				863C193417A2F849005A6E84 /* Settings.jpg in Resources */,
 				863C193617A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */,
 				863C193A17A2F881005A6E84 /* timers.plist in Resources */,
 				863C19D817A31C7A005A6E84 /* icon@2x.png in Resources */,
@@ -401,16 +377,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				863C18DE17A2F726005A6E84 /* InfoPlist.strings in Resources */,
-				863C190917A2F7E6005A6E84 /* SettingsViewController.xib in Resources */,
 				863C191D17A2F849005A6E84 /* BlackBG.png in Resources */,
 				863C191F17A2F849005A6E84 /* Left_Hand.png in Resources */,
 				863C192117A2F849005A6E84 /* RIght_Hand.png in Resources */,
-				863C192317A2F849005A6E84 /* icon2.jpg in Resources */,
 				863C192917A2F849005A6E84 /* process.png in Resources */,
 				863C192B17A2F849005A6E84 /* icon06.png in Resources */,
 				863C192D17A2F849005A6E84 /* history.png in Resources */,
-				863C193317A2F849005A6E84 /* Clock.jpg in Resources */,
-				863C193517A2F849005A6E84 /* Settings.jpg in Resources */,
 				863C193717A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

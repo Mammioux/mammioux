@@ -63,8 +63,7 @@
 	//create timer objects
 	ltc = [TimerController alloc];
 	rtc = [TimerController alloc];
-	[rtc createTargetTimer:self withTargetTime:rstimer];
-	[ltc createTargetTimer:self withTargetTime:lstimer];
+
 	lpv.progress = 0;
 	rpv.progress = 0;
 	
@@ -169,7 +168,7 @@
 	//NSLog(@"ToggleSide");
 	if (started == NO)
 	{
-		[klog addToLog:@"SF"];
+		[klog addToLog:@"SF"]; // starting session
 		started = YES;
 		[[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"lastSession"];
 		[self updateSessionLabel];
@@ -268,6 +267,8 @@
 }
 
 -(void) startTimer:(TimerController *) tc {
+    int targetTime = tc == ltc? lstimer:rstimer;
+	[tc createTargetTimer:self withTargetTime:targetTime];
 	[tc startTargetTimer:self];
 	[tc startSecondsTimer:self];
 }
@@ -275,7 +276,8 @@
 -(void)switchTimer:(BOOL) lsLast {
 	if (started == NO)
 	{
-		started = YES;
+		started = YES; // indicates session starting
+        [klog addToLog:@"SF"]; // starting session
 		[[NSUserDefaults standardUserDefaults] setObject: [NSDate date] forKey:@"lastSession"];
 		[self updateSessionLabel];
 		//[self saveSettings];
@@ -372,7 +374,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
 	NSLog(@"Saving current state");	
-	[klog addToLog:@"TF"];
+	//[klog addToLog:@"TF"];
 	[klog flush];
 	
 	[self saveSettings];
