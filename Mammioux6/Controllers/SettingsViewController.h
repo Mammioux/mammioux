@@ -49,7 +49,7 @@
 @class SettingsView;
 @class NumericCell;
 
-@interface SettingsViewController : UITableViewController <UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+@interface SettingsViewController : UITableViewController <UITextFieldDelegate>
 {
 
 }

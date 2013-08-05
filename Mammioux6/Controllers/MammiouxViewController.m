@@ -61,8 +61,8 @@
 	//[self saveSettings];
 	
 	//create timer objects
-	ltc = [TimerController alloc];
-	rtc = [TimerController alloc];
+	ltc = [[TimerController alloc] init];
+	rtc = [[TimerController alloc] init];
 
 	lpv.progress = 0;
 	rpv.progress = 0;
@@ -370,6 +370,20 @@
 			break;
 	}
 	
+}
+
+-(void) targetReached:(id)sender {
+    UIImage *bgInactiveButton = [UIImage imageNamed:@"greenBG.png"];
+    if (sender == rtc) {
+        // make right button green
+        [rb setBackgroundImage:bgInactiveButton forState:UIControlStateSelected];
+        [rb setImage:[UIImage imageNamed:@"RIght_Hand.png"] forState:UIControlStateSelected];
+        [rb setImage:[UIImage imageNamed:@"RIght_Hand.png"] forState:UIControlStateNormal];
+    } else {
+        [lb setBackgroundImage:bgInactiveButton forState:UIControlStateSelected];
+        [lb setImage:[UIImage imageNamed:@"Left_Hand.png"] forState:UIControlStateSelected];
+        [lb setImage:[UIImage imageNamed:@"Left_Hand.png"] forState:UIControlStateNormal];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

@@ -15,20 +15,6 @@
 @implementation NumericCell
 
 
-//- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-//   if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-//        // Custom initialization
-//        // initializes label with setting variable name
-//        // initializes text field with value and protected
-//       NSLog(@"Initialize Numeric Cell");
-//       self.entryValue.text = self.detailTextLabel.text;
-//       self.detail.text = self.detailTextLabel.text;
-//       _entryValue.textColor = [UIColor yellowColor];
-//       _entryValue.backgroundColor = [UIColor redColor];
-//    }
-//    return self;
-//}
-
 - (id)initWithCoder:(NSCoder *)aDecoder {
 
     if (self = [super initWithCoder:aDecoder]) {

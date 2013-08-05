@@ -54,6 +54,7 @@
 -(void) tripleTap;
 -(void) quadrupleTap;
 -(void) updateSessionLabel;
+-(void) targetReached:(id)sender;
 
 
 @end

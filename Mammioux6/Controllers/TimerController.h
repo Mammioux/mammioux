@@ -18,8 +18,6 @@
 @property (nonatomic) NSUInteger timerCount;
 @property (nonatomic, retain) MammiouxViewController *kvc;
 
-- (IBAction)startOneOffTimer:sender;
-
 - (IBAction)startSecondsTimer:sender;
 - (IBAction)stopSecondsTimer:sender;
 
@@ -30,8 +28,6 @@
 - (void)secondsFireMethod:(NSTimer*)theTimer;
 
 - (void)invocationMethod:(NSDate *)date;
-
-- (void)targetFireMethod:(NSTimer*)theTimer;
 
 - (NSDictionary *)userInfo;
 

@@ -25,17 +25,19 @@
    // NSLog(@"Timer started on %@", startDate);
 }
 
+-(TimerController *)init {
+    self = [super init];
+    if (self) {
+        self.timerCount = 0;
+    }
+    
+    return self;
+}
+
 - (void)invocationMethod:(NSDate *)date {
    // NSLog(@"Invocation for timer started on %@", date);
 	[kvc alertMsg:@"Change Side"];
-}
-
-- (IBAction)startOneOffTimer:sender {
-    [NSTimer scheduledTimerWithTimeInterval:2.0
-									 target:self
-								   selector:@selector(targetMethod:)
-								   userInfo:[self userInfo]
-									repeats:NO];
+    [kvc targetReached:self];
 }
 
 - (IBAction)startSecondsTimer:sender {
@@ -55,9 +57,13 @@
     [invocation setSelector:@selector(invocationMethod:)];
     NSDate *startDate = [NSDate date];
     [invocation setArgument:&startDate atIndex:2];
+    if (seconds < self.timerCount) {
+        return;
+    }
+    NSLog(@"Stop timer in: %f seconds",seconds-self.timerCount);
     NSTimer *timer = [NSTimer timerWithTimeInterval:seconds-self.timerCount invocation:invocation repeats:YES];
     self.targetTimer = timer;
-	timerCount = 0;
+	//timerCount = 0;
 }
 
 - (IBAction)startTargetTimer:sender {
@@ -75,13 +81,6 @@
 - (IBAction)stopTargetTimer:sender {
     [targetTimer invalidate];
     self.targetTimer = nil;
-}
-
-- (void)targetFireMethod:(NSTimer*)theTimer {
-    //NSDate *startDate = [[theTimer userInfo] objectForKey:@"StartDate"];
- //   NSLog(@"Target Timer started on %@", startDate);
-    [theTimer invalidate];
-	
 }
 
 - (void)secondsFireMethod:(NSTimer*)theTimer {

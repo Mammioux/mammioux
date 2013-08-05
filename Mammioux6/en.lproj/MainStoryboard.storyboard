@@ -16,13 +16,13 @@
                             <userLayoutGuide location="121" affinity="minY"/>
                             <userLayoutGuide location="166" affinity="minY"/>
                             <userLayoutGuide location="240" affinity="minX"/>
-                            <userLayoutGuide location="96" affinity="minY"/>
-                            <userLayoutGuide location="150" affinity="minY"/>
+                            <userLayoutGuide location="95" affinity="minY"/>
+                            <userLayoutGuide location="151" affinity="minY"/>
                         </userGuides>
                         <subviews>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-TD-kXd">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Acn-mh-MmI"/>
+                                    <constraint firstAttribute="width" constant="240" id="afp-Qz-dRf"/>
                                     <constraint firstAttribute="height" constant="240" type="user" id="lwQ-Qf-OnO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -30,7 +30,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="disabled" title="" backgroundImage="button_dark.png">
+                                <state key="disabled" title="">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -48,7 +48,7 @@
                             </button>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrT-BF-wqP">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="ECv-Wy-kDH"/>
+                                    <constraint firstAttribute="width" constant="240" id="Jg3-9W-tQZ"/>
                                     <constraint firstAttribute="height" constant="240" type="user" id="Jr5-6i-UaM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -56,7 +56,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="disabled" title="" backgroundImage="button_dark.png"/>
+                                <state key="disabled" title=""/>
                                 <state key="selected" title="" backgroundImage="Left_Hand.png"/>
                                 <state key="highlighted" title="LEFT" backgroundImage="Left_Hand.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -407,7 +407,6 @@
     <resources>
         <image name="Left_Hand.png" width="120" height="120"/>
         <image name="RIght_Hand.png" width="120" height="120"/>
-        <image name="button_dark.png" width="16" height="16"/>
         <image name="history.png" width="30" height="30"/>
         <image name="iPhone_settings_icon_by_triumvirateebp.png" width="59" height="60"/>
     </resources>
