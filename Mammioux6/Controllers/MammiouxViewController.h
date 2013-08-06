@@ -25,6 +25,8 @@
 }
 @property (nonatomic, retain) IBOutlet UIButton *lb;
 @property (nonatomic, retain) IBOutlet UIButton *rb;
+@property (strong, nonatomic) IBOutlet UIImageView *leftBGImage;
+@property (strong, nonatomic) IBOutlet UIImageView *rightBGImage;
 @property (nonatomic, retain) IBOutlet UILabel *ltimer;
 @property (nonatomic, retain) IBOutlet UILabel *rtimer;
 @property (nonatomic, retain) IBOutlet UILabel *lastTimeLabel;

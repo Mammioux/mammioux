@@ -64,6 +64,14 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     NSLog(@"Application entered Background");
+
+        UIApplicationState state = [application applicationState];
+        if (state == UIApplicationStateInactive) {
+            NSLog(@"Sent to background by locking screen");
+        } else if (state == UIApplicationStateBackground) {
+            NSLog(@"Sent to background by home button/switching to other app");
+        } 
+
 //    [self applicationWillTerminate:application];
 //    exit(0);
 

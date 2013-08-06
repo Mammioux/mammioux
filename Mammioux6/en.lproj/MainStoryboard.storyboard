@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vri-0D-iKS">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -13,16 +14,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="121" affinity="minY"/>
+                            <userLayoutGuide location="123" affinity="minY"/>
                             <userLayoutGuide location="166" affinity="minY"/>
                             <userLayoutGuide location="240" affinity="minX"/>
                             <userLayoutGuide location="95" affinity="minY"/>
                             <userLayoutGuide location="151" affinity="minY"/>
                         </userGuides>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" highlightedImage="greenBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ksf-W0-imQ"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" highlightedImage="greenBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="e48-dp-GGo"/>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-TD-kXd">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="afp-Qz-dRf"/>
                                     <constraint firstAttribute="height" constant="240" type="user" id="lwQ-Qf-OnO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -46,9 +48,8 @@
                                     <action selector="selectB:" destination="2" eventType="touchUpInside" id="p5L-gm-vg9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrT-BF-wqP">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="LrT-BF-wqP">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Jg3-9W-tQZ"/>
                                     <constraint firstAttribute="height" constant="240" type="user" id="Jr5-6i-UaM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -139,29 +140,34 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="Etm-Dz-1RK" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="101" id="2gq-6S-kcD"/>
+                            <constraint firstItem="Ksf-W0-imQ" firstAttribute="trailing" secondItem="LrT-BF-wqP" secondAttribute="trailing" type="default" id="0sH-Eu-Mp6"/>
+                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="leading" secondItem="e48-dp-GGo" secondAttribute="leading" type="default" id="2Rj-L8-jU7"/>
+                            <constraint firstItem="Etm-Dz-1RK" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" constant="106" id="5JA-ut-0oX"/>
                             <constraint firstItem="8fZ-Kr-LHP" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="9" id="8Qh-Jo-xmA"/>
-                            <constraint firstItem="LrT-BF-wqP" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="user" id="9IN-xU-Zum"/>
                             <constraint firstItem="8fZ-Kr-LHP" firstAttribute="top" secondItem="1kR-KN-vMv" secondAttribute="top" type="default" id="9h6-96-WAc"/>
-                            <constraint firstItem="LrT-BF-wqP" firstAttribute="baseline" secondItem="Gwd-TD-kXd" secondAttribute="baseline" type="user" id="CWI-5T-eTY"/>
                             <constraint firstAttribute="bottom" secondItem="99k-KX-Yco" secondAttribute="bottom" constant="68" id="EE7-dx-2Zu"/>
                             <constraint firstItem="dLk-hH-bAV" firstAttribute="centerY" secondItem="j7R-on-gRV" secondAttribute="centerY" type="default" id="KM9-hg-3zY"/>
+                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="centerX" secondItem="WOl-7c-ill" secondAttribute="centerX" type="default" id="NoS-ws-xXF"/>
                             <constraint firstItem="1kR-KN-vMv" firstAttribute="top" secondItem="Rlk-pe-YBS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PEg-CF-LQB"/>
                             <constraint firstAttribute="bottom" secondItem="8fZ-Kr-LHP" secondAttribute="bottom" constant="50" id="QQH-fy-vOT"/>
+                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="default" id="RAl-I1-abG"/>
                             <constraint firstItem="99k-KX-Yco" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="50" id="SsD-lL-hCe"/>
+                            <constraint firstItem="e48-dp-GGo" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="default" id="StA-kc-K5b"/>
                             <constraint firstAttribute="trailing" secondItem="Rlk-pe-YBS" secondAttribute="trailing" constant="51" id="Un0-xv-7WV"/>
                             <constraint firstAttribute="bottom" secondItem="C1Y-gd-z95" secondAttribute="bottom" constant="10" id="Vai-5S-n83"/>
                             <constraint firstAttribute="trailing" secondItem="j7R-on-gRV" secondAttribute="trailing" constant="36" id="aGR-q3-EJp"/>
                             <constraint firstAttribute="trailing" secondItem="1kR-KN-vMv" secondAttribute="trailing" constant="9" id="bu3-dZ-UJZ"/>
-                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="centerX" secondItem="WOl-7c-ill" secondAttribute="centerX" type="default" id="csY-nW-Zks"/>
-                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="trailing" secondItem="zv4-zw-VDJ" secondAttribute="trailing" type="default" id="eBv-tj-i78"/>
-                            <constraint firstItem="Etm-Dz-1RK" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" constant="107" id="hZz-Qo-NWK"/>
+                            <constraint firstItem="Etm-Dz-1RK" firstAttribute="centerX" secondItem="LrT-BF-wqP" secondAttribute="centerX" type="default" id="d39-1H-hsI"/>
+                            <constraint firstItem="e48-dp-GGo" firstAttribute="trailing" secondItem="zv4-zw-VDJ" secondAttribute="trailing" type="default" id="dvc-qV-9N5"/>
                             <constraint firstItem="WOl-7c-ill" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" constant="108" id="izt-pa-0tf"/>
                             <constraint firstItem="C1Y-gd-z95" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="112" id="m9L-Mz-IOE"/>
-                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="user" id="mqW-cn-xXb"/>
                             <constraint firstItem="dLk-hH-bAV" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" constant="18" id="n9i-jW-b0z"/>
+                            <constraint firstItem="LrT-BF-wqP" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="default" id="nNh-er-DWh"/>
+                            <constraint firstItem="Ksf-W0-imQ" firstAttribute="top" secondItem="zv4-zw-VDJ" secondAttribute="top" type="default" id="oNp-AP-tc6"/>
                             <constraint firstItem="LrT-BF-wqP" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" type="default" id="qv2-Nx-hAf"/>
+                            <constraint firstItem="Gwd-TD-kXd" firstAttribute="trailing" secondItem="zv4-zw-VDJ" secondAttribute="trailing" type="default" id="r07-GN-jx5"/>
                             <constraint firstAttribute="bottom" secondItem="dLk-hH-bAV" secondAttribute="bottom" constant="2" id="r5W-Bx-vfp"/>
+                            <constraint firstItem="Ksf-W0-imQ" firstAttribute="leading" secondItem="zv4-zw-VDJ" secondAttribute="leading" type="default" id="v7f-AM-NnI"/>
                         </constraints>
                         <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -175,10 +181,12 @@
                         <outlet property="lastTimeLabel" destination="C1Y-gd-z95" id="ELF-0E-jer"/>
                         <outlet property="lb" destination="LrT-BF-wqP" id="muz-Zw-KKt"/>
                         <outlet property="leftAIV" destination="Etm-Dz-1RK" id="0f2-5y-AJx"/>
+                        <outlet property="leftBGImage" destination="Ksf-W0-imQ" id="Jma-IL-o97"/>
                         <outlet property="lpv" destination="8fZ-Kr-LHP" id="CbR-zq-bT6"/>
                         <outlet property="ltimer" destination="99k-KX-Yco" id="lwr-ya-Url"/>
                         <outlet property="rb" destination="Gwd-TD-kXd" id="E60-dP-6Th"/>
                         <outlet property="rightAIV" destination="WOl-7c-ill" id="nSG-95-DHp"/>
+                        <outlet property="rightBGImage" destination="e48-dp-GGo" id="t2Q-C3-ecX"/>
                         <outlet property="rpv" destination="1kR-KN-vMv" id="SXr-v3-RJ7"/>
                         <outlet property="rtimer" destination="Rlk-pe-YBS" id="wSo-ng-adH"/>
                         <outlet property="view" destination="zv4-zw-VDJ" id="THM-0U-7VP"/>
@@ -407,6 +415,7 @@
     <resources>
         <image name="Left_Hand.png" width="120" height="120"/>
         <image name="RIght_Hand.png" width="120" height="120"/>
+        <image name="greenBG.png" width="240" height="240"/>
         <image name="history.png" width="30" height="30"/>
         <image name="iPhone_settings_icon_by_triumvirateebp.png" width="59" height="60"/>
     </resources>

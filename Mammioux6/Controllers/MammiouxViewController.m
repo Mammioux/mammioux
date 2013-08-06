@@ -201,17 +201,15 @@
 	if (lsLast) {
 		lb.selected = YES;
 		lb.highlighted = YES;
-        UIImage *bgActiveButton = [UIImage imageNamed:@"Left_hand.png"];
-        [lb setBackgroundImage:bgActiveButton forState:UIControlStateNormal];
-        [rb setBackgroundImage:bgInactiveButton forState:UIControlStateNormal];
+        rb.selected = NO;
+        rb.highlighted = NO;
 	}
 	else
 	{
 		rb.selected = YES;
 		rb.highlighted = YES;
-        UIImage *bgActiveButton = [UIImage imageNamed:@"RIght_hand.png"];
-        [rb setBackgroundImage:bgActiveButton forState:UIControlStateNormal];
-        [lb setBackgroundImage:bgInactiveButton forState:UIControlStateNormal];
+        lb.highlighted = NO;
+        lb.selected = NO;
 	}
 }
 
@@ -373,16 +371,11 @@
 }
 
 -(void) targetReached:(id)sender {
-    UIImage *bgInactiveButton = [UIImage imageNamed:@"greenBG.png"];
     if (sender == rtc) {
         // make right button green
-        [rb setBackgroundImage:bgInactiveButton forState:UIControlStateSelected];
-        [rb setImage:[UIImage imageNamed:@"RIght_Hand.png"] forState:UIControlStateSelected];
-        [rb setImage:[UIImage imageNamed:@"RIght_Hand.png"] forState:UIControlStateNormal];
-    } else {
-        [lb setBackgroundImage:bgInactiveButton forState:UIControlStateSelected];
-        [lb setImage:[UIImage imageNamed:@"Left_Hand.png"] forState:UIControlStateSelected];
-        [lb setImage:[UIImage imageNamed:@"Left_Hand.png"] forState:UIControlStateNormal];
+        _rightBGImage.highlighted= YES;
+     } else {
+        _leftBGImage.highlighted = YES;
     }
 }
 
