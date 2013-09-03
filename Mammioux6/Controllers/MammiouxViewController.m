@@ -197,7 +197,6 @@
 
 -(void) activateSide:(BOOL)lsLast {
 
-    UIImage *bgInactiveButton = [UIImage imageNamed:@"BlackBG.png"];
 	if (lsLast) {
 		lb.selected = YES;
 		lb.highlighted = YES;

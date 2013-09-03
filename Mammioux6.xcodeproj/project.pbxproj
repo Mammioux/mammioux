@@ -66,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014BF06117B2A23100D1DBB0 /* Mammioux6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mammioux6.entitlements; sourceTree = "<group>"; };
 		863C18AC17A2F725005A6E84 /* Mammioux6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mammioux6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C18AF17A2F725005A6E84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C18B117A2F725005A6E84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -174,6 +175,7 @@
 		863C18B517A2F725005A6E84 /* Mammioux6 */ = {
 			isa = PBXGroup;
 			children = (
+				014BF06117B2A23100D1DBB0 /* Mammioux6.entitlements */,
 				8647231417AAB736005E9160 /* Views */,
 				863C190617A2F7C5005A6E84 /* Resources */,
 				863C18EA17A2F771005A6E84 /* Controllers */,
@@ -521,7 +523,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Teresa Van Dusen (93ETCX57T7)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -529,6 +532,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0A310A17-2584-4011-B2B4-4CCB410C7D40";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -550,11 +555,15 @@
 		863C18E617A2F726005A6E84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Teresa Van Dusen (93ETCX57T7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Teresa Van Dusen (93ETCX57T7)";
 				CURRENT_PROJECT_VERSION = 1.01;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mammioux6/Mammioux6-Prefix.pch";
 				INFOPLIST_FILE = "Mammioux6/Mammioux6-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C94A2926-F511-4A9C-A5C3-45120010DE51";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5D070390-5262-4F4B-949A-E3F0B8E4A036";
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
