@@ -88,6 +88,9 @@
     // Release anything that's not essential, such as cached data
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 -(void) selectB: (id)sender {
 	

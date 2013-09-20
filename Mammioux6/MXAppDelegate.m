@@ -45,8 +45,6 @@
 	}
 	
 	
-    // remove the status bar.
-	[[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self.window makeKeyAndVisible];
 	
     return YES;
