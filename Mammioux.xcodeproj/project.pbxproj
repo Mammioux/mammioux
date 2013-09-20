@@ -67,21 +67,21 @@
 
 /* Begin PBXFileReference section */
 		014BF06117B2A23100D1DBB0 /* Mammioux6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mammioux6.entitlements; sourceTree = "<group>"; };
-		863C18AC17A2F725005A6E84 /* Mammioux6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mammioux6.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		863C18AC17A2F725005A6E84 /* Mammioux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mammioux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C18AF17A2F725005A6E84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C18B117A2F725005A6E84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863C18B317A2F725005A6E84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		863C18B717A2F725005A6E84 /* Mammioux6-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mammioux6-Info.plist"; sourceTree = "<group>"; };
+		863C18B717A2F725005A6E84 /* Mammioux-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mammioux-Info.plist"; sourceTree = "<group>"; };
 		863C18B917A2F725005A6E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		863C18BB17A2F725005A6E84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		863C18BD17A2F725005A6E84 /* Mammioux6-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mammioux6-Prefix.pch"; sourceTree = "<group>"; };
+		863C18BD17A2F725005A6E84 /* Mammioux-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mammioux-Prefix.pch"; sourceTree = "<group>"; };
 		863C18BE17A2F725005A6E84 /* MXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXAppDelegate.h; sourceTree = "<group>"; };
 		863C18BF17A2F725005A6E84 /* MXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXAppDelegate.m; sourceTree = "<group>"; };
 		863C18C117A2F725005A6E84 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		863C18C317A2F725005A6E84 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		863C18C517A2F725005A6E84 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		863C18C817A2F725005A6E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		863C18D217A2F726005A6E84 /* Mammioux6Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mammioux6Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		863C18D217A2F726005A6E84 /* MammiouxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MammiouxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C18D317A2F726005A6E84 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		863C18DB17A2F726005A6E84 /* Mammioux6Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mammioux6Tests-Info.plist"; sourceTree = "<group>"; };
 		863C18DD17A2F726005A6E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 		863C18AD17A2F725005A6E84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				863C18AC17A2F725005A6E84 /* Mammioux6.app */,
-				863C18D217A2F726005A6E84 /* Mammioux6Tests.octest */,
+				863C18AC17A2F725005A6E84 /* Mammioux.app */,
+				863C18D217A2F726005A6E84 /* MammiouxTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,10 +192,10 @@
 			children = (
 				863C193817A2F86C005A6E84 /* Constants.h */,
 				863C193917A2F881005A6E84 /* timers.plist */,
-				863C18B717A2F725005A6E84 /* Mammioux6-Info.plist */,
+				863C18B717A2F725005A6E84 /* Mammioux-Info.plist */,
 				863C18B817A2F725005A6E84 /* InfoPlist.strings */,
 				863C18BB17A2F725005A6E84 /* main.m */,
-				863C18BD17A2F725005A6E84 /* Mammioux6-Prefix.pch */,
+				863C18BD17A2F725005A6E84 /* Mammioux-Prefix.pch */,
 				863C18C117A2F725005A6E84 /* Default.png */,
 				863C18C317A2F725005A6E84 /* Default@2x.png */,
 				863C18C517A2F725005A6E84 /* Default-568h@2x.png */,
@@ -290,9 +290,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		863C18AB17A2F725005A6E84 /* Mammioux6 */ = {
+		863C18AB17A2F725005A6E84 /* Mammioux */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 863C18E417A2F726005A6E84 /* Build configuration list for PBXNativeTarget "Mammioux6" */;
+			buildConfigurationList = 863C18E417A2F726005A6E84 /* Build configuration list for PBXNativeTarget "Mammioux" */;
 			buildPhases = (
 				863C18A817A2F725005A6E84 /* Sources */,
 				863C18A917A2F725005A6E84 /* Frameworks */,
@@ -302,14 +302,14 @@
 			);
 			dependencies = (
 			);
-			name = Mammioux6;
+			name = Mammioux;
 			productName = Mammioux6;
-			productReference = 863C18AC17A2F725005A6E84 /* Mammioux6.app */;
+			productReference = 863C18AC17A2F725005A6E84 /* Mammioux.app */;
 			productType = "com.apple.product-type.application";
 		};
-		863C18D117A2F726005A6E84 /* Mammioux6Tests */ = {
+		863C18D117A2F726005A6E84 /* MammiouxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 863C18E717A2F726005A6E84 /* Build configuration list for PBXNativeTarget "Mammioux6Tests" */;
+			buildConfigurationList = 863C18E717A2F726005A6E84 /* Build configuration list for PBXNativeTarget "MammiouxTests" */;
 			buildPhases = (
 				863C18CD17A2F726005A6E84 /* Sources */,
 				863C18CE17A2F726005A6E84 /* Frameworks */,
@@ -321,9 +321,9 @@
 			dependencies = (
 				863C18D817A2F726005A6E84 /* PBXTargetDependency */,
 			);
-			name = Mammioux6Tests;
+			name = MammiouxTests;
 			productName = Mammioux6Tests;
-			productReference = 863C18D217A2F726005A6E84 /* Mammioux6Tests.octest */;
+			productReference = 863C18D217A2F726005A6E84 /* MammiouxTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -336,7 +336,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = mammioux;
 			};
-			buildConfigurationList = 863C18A717A2F725005A6E84 /* Build configuration list for PBXProject "Mammioux6" */;
+			buildConfigurationList = 863C18A717A2F725005A6E84 /* Build configuration list for PBXProject "Mammioux" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -348,8 +348,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				863C18AB17A2F725005A6E84 /* Mammioux6 */,
-				863C18D117A2F726005A6E84 /* Mammioux6Tests */,
+				863C18AB17A2F725005A6E84 /* Mammioux */,
+				863C18D117A2F726005A6E84 /* MammiouxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -447,7 +447,7 @@
 /* Begin PBXTargetDependency section */
 		863C18D817A2F726005A6E84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 863C18AB17A2F725005A6E84 /* Mammioux6 */;
+			target = 863C18AB17A2F725005A6E84 /* Mammioux */;
 			targetProxy = 863C18D717A2F726005A6E84 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -544,9 +544,10 @@
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1.01;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mammioux6/Mammioux6-Prefix.pch";
-				INFOPLIST_FILE = "Mammioux6/Mammioux6-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Mammioux6/Mammioux-Prefix.pch";
+				INFOPLIST_FILE = "Mammioux6/Mammioux-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = Mammioux;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -559,9 +560,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Teresa Van Dusen (93ETCX57T7)";
 				CURRENT_PROJECT_VERSION = 1.01;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mammioux6/Mammioux6-Prefix.pch";
-				INFOPLIST_FILE = "Mammioux6/Mammioux6-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Mammioux6/Mammioux-Prefix.pch";
+				INFOPLIST_FILE = "Mammioux6/Mammioux-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = Mammioux;
 				PROVISIONING_PROFILE = "C94A2926-F511-4A9C-A5C3-45120010DE51";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5D070390-5262-4F4B-949A-E3F0B8E4A036";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -580,7 +582,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mammioux6/Mammioux6-Prefix.pch";
 				INFOPLIST_FILE = "Mammioux6Tests/Mammioux6Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MammiouxTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -597,7 +599,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mammioux6/Mammioux6-Prefix.pch";
 				INFOPLIST_FILE = "Mammioux6Tests/Mammioux6Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MammiouxTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -606,7 +608,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		863C18A717A2F725005A6E84 /* Build configuration list for PBXProject "Mammioux6" */ = {
+		863C18A717A2F725005A6E84 /* Build configuration list for PBXProject "Mammioux" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				863C18E217A2F726005A6E84 /* Debug */,
@@ -615,7 +617,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		863C18E417A2F726005A6E84 /* Build configuration list for PBXNativeTarget "Mammioux6" */ = {
+		863C18E417A2F726005A6E84 /* Build configuration list for PBXNativeTarget "Mammioux" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				863C18E517A2F726005A6E84 /* Debug */,
@@ -624,7 +626,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		863C18E717A2F726005A6E84 /* Build configuration list for PBXNativeTarget "Mammioux6Tests" */ = {
+		863C18E717A2F726005A6E84 /* Build configuration list for PBXNativeTarget "MammiouxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				863C18E817A2F726005A6E84 /* Debug */,
