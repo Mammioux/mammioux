@@ -47,8 +47,8 @@
 		863C193617A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */; };
 		863C193717A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */; };
 		863C193A17A2F881005A6E84 /* timers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 863C193917A2F881005A6E84 /* timers.plist */; };
-		863C19D817A31C7A005A6E84 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D517A31C78005A6E84 /* icon@2x.png */; };
-		863C19D917A31C7A005A6E84 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D617A31C78005A6E84 /* icon.png */; };
+		863C19D817A31C7A005A6E84 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D517A31C78005A6E84 /* Icon@2x.png */; };
+		863C19D917A31C7A005A6E84 /* Icon_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D617A31C78005A6E84 /* Icon_base.png */; };
 		864722C917A850B7005E9160 /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 864722C817A850B7005E9160 /* NumericCell.m */; };
 		8647231A17AAB7EE005E9160 /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8647231917AAB7EE005E9160 /* SettingsView.m */; };
 		86BB985917B0440D001FEF29 /* greenBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BB985817B0440D001FEF29 /* greenBG.png */; };
@@ -106,8 +106,8 @@
 		863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_settings_icon_by_triumvirateebp.png; sourceTree = "<group>"; };
 		863C193817A2F86C005A6E84 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		863C193917A2F881005A6E84 /* timers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = timers.plist; sourceTree = "<group>"; };
-		863C19D517A31C78005A6E84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		863C19D617A31C78005A6E84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		863C19D517A31C78005A6E84 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		863C19D617A31C78005A6E84 /* Icon_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_base.png; sourceTree = "<group>"; };
 		863C19D717A31C79005A6E84 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		864722C717A850B7005E9160 /* NumericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumericCell.h; path = Mammioux6/Resources/NumericCell.h; sourceTree = SOURCE_ROOT; };
 		864722C817A850B7005E9160 /* NumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumericCell.m; path = Mammioux6/Resources/NumericCell.m; sourceTree = SOURCE_ROOT; };
@@ -254,8 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				86BB985817B0440D001FEF29 /* greenBG.png */,
-				863C19D517A31C78005A6E84 /* icon@2x.png */,
-				863C19D617A31C78005A6E84 /* icon.png */,
+				863C19D517A31C78005A6E84 /* Icon@2x.png */,
+				863C19D617A31C78005A6E84 /* Icon_base.png */,
 				863C19D717A31C79005A6E84 /* icon2.png */,
 				863C190E17A2F849005A6E84 /* BlackBG.png */,
 				863C190F17A2F849005A6E84 /* Left_Hand.png */,
@@ -297,6 +297,7 @@
 				863C18A817A2F725005A6E84 /* Sources */,
 				863C18A917A2F725005A6E84 /* Frameworks */,
 				863C18AA17A2F725005A6E84 /* Resources */,
+				0196FB31183D4C30007C0D00 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -372,8 +373,8 @@
 				863C192C17A2F849005A6E84 /* history.png in Resources */,
 				863C193617A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */,
 				863C193A17A2F881005A6E84 /* timers.plist in Resources */,
-				863C19D817A31C7A005A6E84 /* icon@2x.png in Resources */,
-				863C19D917A31C7A005A6E84 /* icon.png in Resources */,
+				863C19D817A31C7A005A6E84 /* Icon@2x.png in Resources */,
+				863C19D917A31C7A005A6E84 /* Icon_base.png in Resources */,
 				86BB985917B0440D001FEF29 /* greenBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +397,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0196FB31183D4C30007C0D00 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "commit=`git rev-parse --short HEAD`\nbranch=`git rev-parse --abbrev-ref HEAD`\nversion=`/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\"`\n\nfunction processIcon() {\n    export PATH=$PATH:/usr/local/bin\n    base_file=$1\n    base_path=`find ${SRCROOT} -name $base_file`\n    \n    if [[ ! -f ${base_path} || -z ${base_path} ]]; then\n    return;\n    fi\n    \n    target_file=`echo $base_file | sed \"s/_base//\"`\n    target_path=\"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${target_file}\"\n    \n    if [ $CONFIGURATION = \"Release\" ]; then\n    cp ${base_file} $target_path\n    return\n    fi\n    \n    width=`identify -format %w ${base_path}`\n    \n    convert -background '#0008' -fill white -gravity center -size ${width}x40\\\n    caption:\"${version} ${branch} ${commit}\"\\\n    ${base_path} +swap -gravity south -composite ${target_path}\n}\n\nprocessIcon \"Icon_base.png\"\nprocessIcon \"Icon@2x_base.png\"\nprocessIcon \"Icon-72_base.png\"\nprocessIcon \"Icon-72@2x_base.png\"";
+		};
 		863C18D017A2F726005A6E84 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
