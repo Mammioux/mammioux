@@ -14,7 +14,7 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>icon.png</string>
+				<string>Icon.png</string>
 				<string>icon@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
