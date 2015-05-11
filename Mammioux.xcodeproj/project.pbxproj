@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BE01D241AF9C829004A078C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D617A31C78005A6E84 /* Icon.png */; };
+		0BE01D251AF9C82B004A078C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D617A31C78005A6E84 /* Icon.png */; };
+		0BE01D261AF9C82B004A078C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C19D617A31C78005A6E84 /* Icon.png */; };
+		0BE01D271AF9CB04004A078C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE666991AF95B6E001377DD /* Images.xcassets */; };
+		0BE01D281AF9CB08004A078C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE666991AF95B6E001377DD /* Images.xcassets */; };
 		863C18B017A2F725005A6E84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C18AF17A2F725005A6E84 /* UIKit.framework */; };
 		863C18B217A2F725005A6E84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C18B117A2F725005A6E84 /* Foundation.framework */; };
 		863C18B417A2F725005A6E84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C18B317A2F725005A6E84 /* CoreGraphics.framework */; };
@@ -17,35 +22,18 @@
 		863C18C417A2F725005A6E84 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C18C317A2F725005A6E84 /* Default@2x.png */; };
 		863C18C617A2F725005A6E84 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C18C517A2F725005A6E84 /* Default-568h@2x.png */; };
 		863C18C917A2F725005A6E84 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863C18C717A2F725005A6E84 /* MainStoryboard.storyboard */; };
-		863C18D417A2F726005A6E84 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C18D317A2F726005A6E84 /* SenTestingKit.framework */; };
-		863C18D517A2F726005A6E84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C18AF17A2F725005A6E84 /* UIKit.framework */; };
-		863C18D617A2F726005A6E84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C18B117A2F725005A6E84 /* Foundation.framework */; };
-		863C18DE17A2F726005A6E84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 863C18DC17A2F726005A6E84 /* InfoPlist.strings */; };
-		863C18E117A2F726005A6E84 /* Mammioux6Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18E017A2F726005A6E84 /* Mammioux6Tests.m */; };
 		863C18F817A2F7AC005A6E84 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EC17A2F7AC005A6E84 /* SettingsViewController.m */; };
-		863C18F917A2F7AC005A6E84 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EC17A2F7AC005A6E84 /* SettingsViewController.m */; };
 		863C18FA17A2F7AC005A6E84 /* MammiouxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EE17A2F7AC005A6E84 /* MammiouxViewController.m */; };
-		863C18FB17A2F7AC005A6E84 /* MammiouxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18EE17A2F7AC005A6E84 /* MammiouxViewController.m */; };
 		863C18FE17A2F7AC005A6E84 /* TimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F217A2F7AC005A6E84 /* TimerController.m */; };
-		863C18FF17A2F7AC005A6E84 /* TimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F217A2F7AC005A6E84 /* TimerController.m */; };
 		863C190017A2F7AC005A6E84 /* mammiouxLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F417A2F7AC005A6E84 /* mammiouxLog.m */; };
-		863C190117A2F7AC005A6E84 /* mammiouxLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F417A2F7AC005A6E84 /* mammiouxLog.m */; };
 		863C190217A2F7AC005A6E84 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F617A2F7AC005A6E84 /* InfoViewController.m */; };
-		863C190317A2F7AC005A6E84 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C18F617A2F7AC005A6E84 /* InfoViewController.m */; };
 		863C191C17A2F849005A6E84 /* BlackBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190E17A2F849005A6E84 /* BlackBG.png */; };
-		863C191D17A2F849005A6E84 /* BlackBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190E17A2F849005A6E84 /* BlackBG.png */; };
 		863C191E17A2F849005A6E84 /* Left_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190F17A2F849005A6E84 /* Left_Hand.png */; };
-		863C191F17A2F849005A6E84 /* Left_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C190F17A2F849005A6E84 /* Left_Hand.png */; };
 		863C192017A2F849005A6E84 /* RIght_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191017A2F849005A6E84 /* RIght_Hand.png */; };
-		863C192117A2F849005A6E84 /* RIght_Hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191017A2F849005A6E84 /* RIght_Hand.png */; };
 		863C192817A2F849005A6E84 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191417A2F849005A6E84 /* process.png */; };
-		863C192917A2F849005A6E84 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191417A2F849005A6E84 /* process.png */; };
 		863C192A17A2F849005A6E84 /* icon06.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191517A2F849005A6E84 /* icon06.png */; };
-		863C192B17A2F849005A6E84 /* icon06.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191517A2F849005A6E84 /* icon06.png */; };
 		863C192C17A2F849005A6E84 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191617A2F849005A6E84 /* history.png */; };
-		863C192D17A2F849005A6E84 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191617A2F849005A6E84 /* history.png */; };
 		863C193617A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */; };
-		863C193717A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C191B17A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png */; };
 		863C193A17A2F881005A6E84 /* timers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 863C193917A2F881005A6E84 /* timers.plist */; };
 		864722C917A850B7005E9160 /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 864722C817A850B7005E9160 /* NumericCell.m */; };
 		8647231A17AAB7EE005E9160 /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8647231917AAB7EE005E9160 /* SettingsView.m */; };
@@ -66,13 +54,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		863C18D717A2F726005A6E84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 863C18A417A2F725005A6E84 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 863C18AB17A2F725005A6E84;
-			remoteInfo = Mammioux6;
-		};
 		DFE666911AF95B6E001377DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 863C18A417A2F725005A6E84 /* Project object */;
@@ -119,7 +100,6 @@
 		863C18C317A2F725005A6E84 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		863C18C517A2F725005A6E84 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		863C18C817A2F725005A6E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		863C18D217A2F726005A6E84 /* MammiouxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MammiouxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C18D317A2F726005A6E84 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		863C18DB17A2F726005A6E84 /* Mammioux6Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mammioux6Tests-Info.plist"; sourceTree = "<group>"; };
 		863C18DD17A2F726005A6E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -180,16 +160,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		863C18CE17A2F726005A6E84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				863C18D417A2F726005A6E84 /* SenTestingKit.framework in Frameworks */,
-				863C18D517A2F726005A6E84 /* UIKit.framework in Frameworks */,
-				863C18D617A2F726005A6E84 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DFE6667A1AF95B6D001377DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				863C18AC17A2F725005A6E84 /* Mammioux.app */,
-				863C18D217A2F726005A6E84 /* MammiouxTests.octest */,
 				DFE6667D1AF95B6D001377DD /* Mammioux WatchKit Extension.appex */,
 				DFE6668F1AF95B6E001377DD /* Mammioux WatchKit App.app */,
 			);
@@ -413,25 +382,6 @@
 			productReference = 863C18AC17A2F725005A6E84 /* Mammioux.app */;
 			productType = "com.apple.product-type.application";
 		};
-		863C18D117A2F726005A6E84 /* MammiouxTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 863C18E717A2F726005A6E84 /* Build configuration list for PBXNativeTarget "MammiouxTests" */;
-			buildPhases = (
-				863C18CD17A2F726005A6E84 /* Sources */,
-				863C18CE17A2F726005A6E84 /* Frameworks */,
-				863C18CF17A2F726005A6E84 /* Resources */,
-				863C18D017A2F726005A6E84 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				863C18D817A2F726005A6E84 /* PBXTargetDependency */,
-			);
-			name = MammiouxTests;
-			productName = Mammioux6Tests;
-			productReference = 863C18D217A2F726005A6E84 /* MammiouxTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
-		};
 		DFE6667C1AF95B6D001377DD /* Mammioux WatchKit Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFE666A31AF95B6E001377DD /* Build configuration list for PBXNativeTarget "Mammioux WatchKit Extension" */;
@@ -503,7 +453,6 @@
 			projectRoot = "";
 			targets = (
 				863C18AB17A2F725005A6E84 /* Mammioux */,
-				863C18D117A2F726005A6E84 /* MammiouxTests */,
 				DFE6667C1AF95B6D001377DD /* Mammioux WatchKit Extension */,
 				DFE6668E1AF95B6E001377DD /* Mammioux WatchKit App */,
 			);
@@ -516,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				863C18BA17A2F725005A6E84 /* InfoPlist.strings in Resources */,
+				0BE01D281AF9CB08004A078C /* Images.xcassets in Resources */,
 				863C18C217A2F725005A6E84 /* Default.png in Resources */,
 				863C18C417A2F725005A6E84 /* Default@2x.png in Resources */,
 				863C18C617A2F725005A6E84 /* Default-568h@2x.png in Resources */,
@@ -527,23 +477,9 @@
 				863C192A17A2F849005A6E84 /* icon06.png in Resources */,
 				863C192C17A2F849005A6E84 /* history.png in Resources */,
 				863C193617A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */,
+				0BE01D241AF9C829004A078C /* Icon.png in Resources */,
 				863C193A17A2F881005A6E84 /* timers.plist in Resources */,
 				86BB985917B0440D001FEF29 /* greenBG.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		863C18CF17A2F726005A6E84 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				863C18DE17A2F726005A6E84 /* InfoPlist.strings in Resources */,
-				863C191D17A2F849005A6E84 /* BlackBG.png in Resources */,
-				863C191F17A2F849005A6E84 /* Left_Hand.png in Resources */,
-				863C192117A2F849005A6E84 /* RIght_Hand.png in Resources */,
-				863C192917A2F849005A6E84 /* process.png in Resources */,
-				863C192B17A2F849005A6E84 /* icon06.png in Resources */,
-				863C192D17A2F849005A6E84 /* history.png in Resources */,
-				863C193717A2F849005A6E84 /* iPhone_settings_icon_by_triumvirateebp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +489,8 @@
 			files = (
 				DFE6668C1AF95B6D001377DD /* Images.xcassets in Resources */,
 				DFE666A81AF97187001377DD /* Left_Hand.png in Resources */,
+				0BE01D251AF9C82B004A078C /* Icon.png in Resources */,
+				0BE01D271AF9CB04004A078C /* Images.xcassets in Resources */,
 				DFE666A71AF9716B001377DD /* RIght_Hand.png in Resources */,
 				DFE666901AF95B6E001377DD /* Mammioux WatchKit App.app in Resources */,
 			);
@@ -564,6 +502,7 @@
 			files = (
 				DFE666981AF95B6E001377DD /* Interface.storyboard in Resources */,
 				DFE666A91AF97188001377DD /* Left_Hand.png in Resources */,
+				0BE01D261AF9C82B004A078C /* Icon.png in Resources */,
 				DFE666A61AF97167001377DD /* RIght_Hand.png in Resources */,
 				DFE6669A1AF95B6E001377DD /* Images.xcassets in Resources */,
 			);
@@ -586,19 +525,6 @@
 			shellScript = "commit=`git rev-parse --short HEAD`\nbranch=`git rev-parse --abbrev-ref HEAD`\nversion=`/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\"`\n\nEcho \"${version} ${branch} ${commit}\"\n\nfunction processIcon() {\n    export PATH=$PATH:/usr/local/bin\n    base_file=$1\n    base_path=`find ${SRCROOT} -name $base_file`\n    echo $base_path\n    \n    if [[ ! -f ${base_path} || -z ${base_path} ]]; then\n    return;\n    fi\n    \n    target_file=$base_file\n    target_path=\"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${target_file}\"\n    echo $target_path\n\n    if [ $CONFIGURATION = \"Release\" ]; then\n    cp ${base_path} $target_path\n    return\n    fi\necho \"Applying version layer\"\n    width=`identify -format %w ${base_path}`\n    \n    convert -background '#0008' -fill white -gravity center -size ${width}x40 \\\n    caption:\"${version} ${branch} ${commit}\" \\\n    ${base_path} +swap -gravity south -composite ${target_path}\n}\n\nprocessIcon \"Icon.png\"\nprocessIcon \"icon@2x.png\"\nprocessIcon \"Icon-72_base.png\"\nprocessIcon \"Icon-72@2x_base.png\"\nexit 0;";
 			showEnvVarsInLog = 0;
 		};
-		863C18D017A2F726005A6E84 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -619,19 +545,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		863C18CD17A2F726005A6E84 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				863C18E117A2F726005A6E84 /* Mammioux6Tests.m in Sources */,
-				863C18F917A2F7AC005A6E84 /* SettingsViewController.m in Sources */,
-				863C18FB17A2F7AC005A6E84 /* MammiouxViewController.m in Sources */,
-				863C18FF17A2F7AC005A6E84 /* TimerController.m in Sources */,
-				863C190117A2F7AC005A6E84 /* mammiouxLog.m in Sources */,
-				863C190317A2F7AC005A6E84 /* InfoViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DFE666791AF95B6D001377DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,11 +558,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		863C18D817A2F726005A6E84 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 863C18AB17A2F725005A6E84 /* Mammioux */;
-			targetProxy = 863C18D717A2F726005A6E84 /* PBXContainerItemProxy */;
-		};
 		DFE666921AF95B6E001377DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DFE6668E1AF95B6E001377DD /* Mammioux WatchKit App */;
@@ -789,40 +697,6 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		863C18E817A2F726005A6E84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mammioux6.app/Mammioux6";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mammioux6/Mammioux6-Prefix.pch";
-				INFOPLIST_FILE = "Mammioux6Tests/Mammioux6Tests-Info.plist";
-				PRODUCT_NAME = MammiouxTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		863C18E917A2F726005A6E84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mammioux6.app/Mammioux6";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mammioux6/Mammioux6-Prefix.pch";
-				INFOPLIST_FILE = "Mammioux6Tests/Mammioux6Tests-Info.plist";
-				PRODUCT_NAME = MammiouxTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -970,15 +844,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		863C18E717A2F726005A6E84 /* Build configuration list for PBXNativeTarget "MammiouxTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				863C18E817A2F726005A6E84 /* Debug */,
-				863C18E917A2F726005A6E84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DFE666A21AF95B6E001377DD /* Build configuration list for PBXNativeTarget "Mammioux WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -986,6 +851,7 @@
 				DFE666A11AF95B6E001377DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFE666A31AF95B6E001377DD /* Build configuration list for PBXNativeTarget "Mammioux WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -994,6 +860,7 @@
 				DFE6669F1AF95B6E001377DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
