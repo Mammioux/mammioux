@@ -42,6 +42,47 @@
         //register persistent domain
 		[defaults setPersistentDomain:appDefaults forName:@"mammioux"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
+        
+        // register for remote notifications
+        
+        [application registerUserNotificationSettings:
+         [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert categories:nil]];
+        [application registerForRemoteNotifications];
+        
+        // schedule local notifications
+        
+        // Post local notification
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.fireDate = [NSDate date];
+        notification.timeZone = [NSTimeZone defaultTimeZone];
+        
+        // Set notification text
+        NSString *alertText = nil;
+        
+        alertText = @"Testing sending notifications to watch";
+        notification.alertBody = alertText;
+        
+        // Set the action button
+        notification.alertAction = NSLocalizedString(@"CORRECT_ISSUES", nil);
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        notification.applicationIconBadgeNumber = 1;
+        
+        
+        UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+        if (localNotif) {
+            localNotif.alertBody = NSLocalizedString(@"OPT_OUT_LOCAL_NOTIFICATION_MESSAGE", nil);
+            localNotif.applicationIconBadgeNumber = 1;
+            localNotif.soundName = UILocalNotificationDefaultSoundName;
+            localNotif.fireDate=[NSDate dateWithTimeIntervalSinceNow:300.0f];
+            [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+        }
+        
+        UIAlertView *av = [UIAlertView new];
+        
+        [av initWithTitle:@"ALERT TITLE" message:@"Message" delegate:self cancelButtonTitle:nil otherButtonTitles:@[@"Continue"]];
+
+        // Schedule the notification
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 	}
 	
 	
